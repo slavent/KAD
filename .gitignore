@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 # Created by .ignore support plugin (hsz.mobi)
 ### Sass template
 .sass-cache/
 *.css.map
 ### Node template
+=======
+>>>>>>> 29ad84946de910e33b150b0bca8d76eb4bed7733
 # Logs
 logs
 *.log
@@ -40,6 +43,7 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
 ### Example user template template
 ### Example user template
 
