@@ -1,0 +1,168 @@
+body {
+    background: #f7f7f7;
+    color: #2f2e2e;
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+header {
+    height: 400px;
+    background: url(i/EFenkN3I96A.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.logo {
+    background: #fff url(i/z8NBdv3Q5Bk.jpg) center center no-repeat;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}
+
+.wrp {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+nav {
+    display: table;
+    width: 100%;
+    margin: -10px 0 60px 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+nav li:nth-child(1) a {
+    background: #fff;
+    color: #2f2e2e;
+}
+
+nav a {
+    padding: 10px 20px;
+    background: #2f2e2e;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.content {
+    float: left;
+    width: 67%;
+}
+
+.sidebar {
+    float: right;
+    width: 30%;
+}
+
+.box {
+    background: #fff;
+    padding: 20px;
+}
+
+.news {
+
+}
+
+.news__item {
+    margin: 0 0 40px 0;
+    position: relative;
+}
+
+.news__title {
+    text-transform: uppercase;
+    margin: 20px 0 20px 0;
+}
+
+.news__category {
+    position: absolute;
+    background: #2f2e2e;
+    color: #fff;
+    font-style: italic;
+    top: -10px;
+    left: -10px;
+    padding: 10px;
+}
+
+.news__desc {
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+.news__photo {
+    margin: 0 0 20px 0;
+}
+
+.news__photo img {
+    width: 100%;
+}
+
+.news__more {
+    text-transform: uppercase;
+    border: 1px solid #2f2e2e;
+    padding: 5px;
+    text-decoration: none;
+    color: #2f2e2e;
+    font-size: 10px;
+}
+
+.top-posts {
+    margin: 0 0 30px 0;
+}
+
+.top-posts__item {
+    border-bottom: 1px solid #dedede;
+    display: table;
+    width: 100%;
+    padding: 15px 0;
+    clear: both;
+}
+
+.top-posts__item:last-child {
+    border: none;
+    padding: 15px 0 0;
+}
+
+.top-posts__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+.top-posts__photo {
+    float: left;
+}
+
+.top-posts__subtitle, .top-posts__date {
+    margin: 0 0 0 80px;
+}
+
+.top-posts__date {
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.about__photo img {
+    width: 100%;
+}
+
+.about__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.about__desc {
+    line-height: 1.6;
+}

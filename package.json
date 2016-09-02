@@ -1,0 +1,22 @@
+{
+  "name": "kad",
+  "version": "0.0.1",
+  "description": "kad project",
+  "main": "src/index.jsx",
+  "scripts": {
+    "dev": "",
+    "prod": ""
+  },
+  "keywords": [
+    "kad",
+    "react",
+    "relay"
+  ],
+  "author": "Kozinetz Svyatoslav",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^15.3.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  }
+}
