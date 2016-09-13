@@ -1,0 +1,44 @@
+.news {
+
+    &__item {
+        margin: 0 0 40px 0;
+        position: relative;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin: 20px 0 20px 0;
+    }
+
+    &__category {
+        position: absolute;
+        background: #2f2e2e;
+        color: #fff;
+        font-style: italic;
+        top: -10px;
+        left: -10px;
+        padding: 10px;
+    }
+
+    &__desc {
+        line-height: 1.6;
+        margin: 0 0 20px 0;
+    }
+
+    &__photo {
+        margin: 0 0 20px 0;
+    }
+
+    &__photo img {
+        width: 100%;
+    }
+
+    &__more {
+        text-transform: uppercase;
+        border: 1px solid #2f2e2e;
+        padding: 5px;
+        text-decoration: none;
+        color: #2f2e2e;
+        font-size: 10px;
+    }   
+}

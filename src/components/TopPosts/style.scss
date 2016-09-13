@@ -1,0 +1,37 @@
+.top-posts {
+    margin: 0 0 30px 0;
+
+    &__item {
+        border-bottom: 1px solid #dedede;
+        display: table;
+        width: 100%;
+        padding: 15px 0;
+        clear: both;
+    }
+
+    &__item:last-child {
+        border: none;
+        padding: 15px 0 0;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 0 15px 0;
+    }
+
+    &__photo {
+        float: left;
+    }
+
+    &__subtitle, &__date {
+        margin: 0 0 0 80px;
+    }
+
+    &__date {
+        color: #999;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}

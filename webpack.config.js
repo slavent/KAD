@@ -1,4 +1,4 @@
-const NODE_ENV = process.env.NODE_ENV.trim() || "development";
+const NODE_ENV = process.env.NODE_ENV && process.env.NODE_ENV.trim() || "development";
 
 var
 	webpack = require( "webpack" ),
@@ -7,11 +7,12 @@ var
 	babelQuery = {
 		presets: [ "es2015", "react" ],
 		plugins: [ "transform-proto-to-assign", "transform-es3-property-literals", "transform-es3-member-expression-literals" ]
-	},
-	config = {};
+	};
 
-config = {
-	entry: {},
+module.exports = {
+	entry: {
+		"kad": path.resolve( __dirname, "src/index" )
+	},
 	output: {
 		publicPath: "",
 		path: path.resolve( __dirname, "dist" ),
@@ -24,7 +25,7 @@ config = {
 		}, {
 			test: /\.jsx|js(\?.+)?$/,
 			exclude: [ /node_modules(?![\/\\]ufs-)/, /bundle.js/ ],
-			loaders: [ "es3ify", `babel?${JSON.stringify(babelQuery)}` ]
+			loaders: [ /*"es3ify", */ `babel?${JSON.stringify(babelQuery)}` ]
 		}, {
 			test: /\.(scss|css)(\?.+)?$/,
 			loader: "style-loader!css-loader!sass-loader?sourceMap"
@@ -93,35 +94,11 @@ config = {
 		},
 		headers: {
 			"Cache-Control": "no-cache"
-		},
-		proxy: {
-			"/deposit-withdraw-flow/*": {
-				target: "http://sbt-orefs-040.ca.sbrf.ru:9080",
-				bypass: function( req, res, proxyOptions ) {
-					req.headers[ "iv-user" ] = "stepan";
-					req.headers[ "iv-groups" ] = "EFSERKC_specialist_contact_center";
-					req.headers[ "ipaddrs" ] = "0.0.0.0";
-				}
-			},
-			"/deposit-income-flow/*": {
-				target: "http://sbt-orefs-040.ca.sbrf.ru:9080",
-				bypass: function( req, res, proxyOptions ) {
-					req.headers[ "iv-user" ] = "stepan";
-					req.headers[ "iv-groups" ] = "EFSERKC_specialist_contact_center";
-					req.headers[ "ipaddrs" ] = "0.0.0.0";
-				}
-			}
 		}
 	}
 };
 
 if ( NODE_ENV !== "development" ) {
-	config.entry[ "ufs-deposit-withdraw-ui" ] = path.resolve( __dirname, "src/app.jsx" );
-	config.output.libraryTarget = "amd";
-	config.externals = {
-		"react": "react",
-		"react-dom": "react-dom"
-	};
 	config.plugins.push( new webpack.optimize.UglifyJsPlugin( {
 		sourceMap: true,
 		beautify: false,
@@ -136,8 +113,4 @@ if ( NODE_ENV !== "development" ) {
 			unsafe: true
 		}
 	} ) );
-} else {
-	config.entry[ "build" ] = path.resolve( __dirname, "src/container" );
 }
-
-module.exports = config;

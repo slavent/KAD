@@ -1,21 +1,17 @@
 {
-    "name": "ufs-deposit-withdraw-ui",
-    "version": "0.1.8",
-    "description": "UFS DEPOSITS",
-    "main": "src/deposit-withdraw.jsx",
+    "name": "kad",
+    "version": "0.0.1",
+    "description": "KAD",
+    "main": "src/index.jsx",
     "scripts": {
         "init": "npm i webpack webpack-dev-server -g --ignore-scripts --verbose && npm i --ignore-scripts --verbose",
-        "dev": "npm i ufs-deposit-common-ui@latest --save && set NODE_ENV=development && npm run build-dev && webpack-dev-server --host 0.0.0.0 --port 8080",
-        "prod": "npm i ufs-deposit-common-ui@latest --save && set NODE_ENV=production && node tasks/build-prod",
-        "build-dev": "node tasks/build-dev && cp index.html dist",
+        "dev": "set NODE_ENV=development && cp index.html dist/ && webpack-dev-server --host 0.0.0.0 --port 8080",
+        "prod": "set NODE_ENV=production && webpack",
         "prepublish": "eslint src/ && npm run prod"
     },
     "repository": {
         "type": "git",
-        "url": "http://sbt-kozinetc-sv@10.68.194.158/scm/efs_deposits/ufs-deposit-withdraw-ui.git"
-    },
-    "publishConfig": {
-        "registry": "http://sbt-rds-001.ca.sbrf.ru:8063/"
+        "url": ""
     },
     "keywords": [
         "ufs",
