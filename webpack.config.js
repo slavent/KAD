@@ -30,14 +30,8 @@ module.exports = {
 			test: /\.(scss|css)(\?.+)?$/,
 			loader: "style-loader!css-loader!sass-loader?sourceMap"
 		}, {
-			test: /\.png(\?.+)?$/,
-			loader: "file-loader?limit=8192&name=images/[hash].[ext]"
-		}, {
-			test: /\.gif(\?.+)?$/,
-			loader: "file-loader?limit=8192&name=images/[hash].[ext]"
-		}, {
-			test: /\.svg(\?.+)?$/,
-			loader: "file-loader?limit=8192&name=images/[hash].[ext]"
+			test: /\.(jpe?g|png|gif|svg)$/i,
+			loader: "file-loader?name=images/[hash].[ext]"
 		}, {
 			test: /\.ttf(\?.+)?$/,
 			loader: "file-loader?limit=8192&name=fonts/[hash].[ext]"
