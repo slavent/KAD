@@ -1,11 +1,13 @@
 /**
  * @author: Kozinets Svyatoslav
  */
+import PostList from "components/PostList"
+import Props from "./props"
 
 export default class Library extends React.Component {
     render() {
-        return (
-            <div>123</div>
-        )
+        return <PostList data={ this.props.data }/>
     }
 }
+
+Library.defaultProps = Props

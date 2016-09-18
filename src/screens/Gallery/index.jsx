@@ -1,11 +1,13 @@
 /**
  * @author: Kozinets Svyatoslav
  */
+import PhotoAlbums from "components/PhotoAlbums"
+import Props from "./props"
 
 export default class Gallery extends React.Component {
     render() {
-        return (
-            <div>123</div>
-        )
+        return <PhotoAlbums data={ this.props.data }/>
     }
 }
+
+Gallery.defaultProps = Props

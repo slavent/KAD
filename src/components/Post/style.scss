@@ -1,0 +1,22 @@
+.post {
+
+    &__photo {
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        width: 1024px;
+        height: 300px;
+        -webkit-background-size: 100% auto;
+        background-size: 100% auto;
+    }
+
+    &__title {
+        font-size: 30px;
+        color: #fff;
+    }
+
+    &__desc {
+        margin: 20px 0 0;
+        line-height: 1.4;
+    }
+}

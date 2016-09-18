@@ -1,0 +1,29 @@
+.albums {
+
+    &__item {
+        position: relative;
+        float: left;
+        margin: 0 20px 40px 20px;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__photo {
+
+    }
+
+    &__title {
+        margin: 10px 0 0;
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+}

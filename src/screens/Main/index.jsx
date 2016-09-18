@@ -3,7 +3,7 @@
  */
 import ControllerRender from "./controllers/ControllerRender"
 
-export default class Portfolio extends React.Component {
+export default class Main extends React.Component {
     render() {
         return (
             <div>
