@@ -14,7 +14,17 @@ let props = {
         }, {
             url: "/library",
             title: "Копилка знаний",
-            active: false
+            active: false,
+            children: [ {
+                url: "/for-parents",
+                title: "Для родителей"
+            }, {
+                url: "/for-teacher",
+                title: "Для учителей"
+            }, {
+                url: "/for-children",
+                title: "Ученикам"
+            } ]
         }, {
             url: "/gallery",
             title: "Фотогалерея",

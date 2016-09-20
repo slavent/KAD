@@ -10,8 +10,4 @@ export default class ControllerREST {
             posts: Mapper.mapPosts( r.data )
         } ) ).catch( e => console.error( e ) )
     }
-
-    static getTopPost() {}
-
-    static getAboutData() {}
 }

@@ -1,13 +1,13 @@
 /**
  * @author: Kozinets Svyatoslav
  */
-import NewsList from "components/NewsList"
+import PostList from "components/PostList"
 import TopPosts from "components/TopPosts"
 import AboutMe from "components/AboutMe"
 
 export default class ControllerRender {
-    static renderNewsList() {
-        return <NewsList/>
+    static renderPostList() {
+        return <PostList data={ this.state.posts }/>
     }
 
     static renderTopPosts() {

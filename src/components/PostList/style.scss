@@ -1,54 +1,44 @@
-.post-list {
+.posts {
 
     &__item {
-        width: 100%;
-        display: table;
-        clear: both;
-        border-bottom: 1px dashed #afafaf;
-        padding: 0 0 30px 0;
-        margin: 0 0 30px 0;
-
-        &:last-child {
-            border: none;
-            margin: 0;
-            padding: 0;
-        }
-    }
-
-    &__photo {
-        float: left;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-
-    &__right {
-        margin: 0 0 0 215px;
+        margin: 0 0 40px 0;
+        position: relative;
     }
 
     &__title {
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    &__desc {
-        margin: 0 0 10px 0;
-        line-height: 1.4;
+        text-transform: uppercase;
+        margin: 20px 0 20px 0;
     }
 
     &__category {
-        margin: 5px 0 10px 0;
-        color: #8d1801;
+        position: absolute;
+        background: #2f2e2e;
+        color: #fff;
+        font-style: italic;
+        top: -10px;
+        left: -10px;
+        padding: 10px;
     }
 
-    &__readmore {
-        text-align: right;
-
-        a {
-            color: #8d1801;
-
-            &:hover {
-                color: #c56f00;                
-            }
-        }
+    &__desc {
+        line-height: 1.6;
+        margin: 0 0 20px 0;
     }
+
+    &__photo {
+        margin: 0 0 20px 0;
+    }
+
+    &__photo img {
+        width: 100%;
+    }
+
+    &__more {
+        text-transform: uppercase;
+        border: 1px solid #2f2e2e;
+        padding: 5px;
+        text-decoration: none;
+        color: #2f2e2e;
+        font-size: 10px;
+    }   
 }
