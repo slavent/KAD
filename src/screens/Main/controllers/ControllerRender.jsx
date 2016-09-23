@@ -15,6 +15,6 @@ export default class ControllerRender {
     }
 
     static renderAboutInfo() {
-        return <AboutMe/>
+        return <AboutMe data={ this.state.aboutData }/>
     }
 }

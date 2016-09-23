@@ -1,11 +1,10 @@
 /**
  * @author: Kozinets Svyatoslav
  */
+import Skils from "components/Skils"
 
 export default class Portfolio extends React.Component {
     render() {
-        return (
-            <div>123</div>
-        )
+        return <Skils/>
     }
 }

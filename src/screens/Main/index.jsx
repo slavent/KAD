@@ -14,6 +14,7 @@ export default class Main extends React.Component {
 
     componentDidMount() {
         ControllerREST.getPosts.call( this )
+        ControllerREST.getAboutData.call( this )
     }
 
     render() {
@@ -22,7 +23,7 @@ export default class Main extends React.Component {
                 <div className="content">{ this.state.posts && ControllerRender.renderPostList.call( this ) }</div>
                 <div className="sidebar">
                     { ControllerRender.renderTopPosts.call( this ) }
-                    { ControllerRender.renderAboutInfo.call( this ) }
+                    { this.state.aboutData && ControllerRender.renderAboutInfo.call( this ) }
                 </div>
             </div>
         )

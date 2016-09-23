@@ -3,6 +3,7 @@
  */
 import ControllerREST from "./Controllers/controllerREST"
 import PostList from "components/PostList"
+import Loader from "components/Loader"
 import Props from "./props"
 
 export default class Library extends React.Component {
@@ -18,8 +19,7 @@ export default class Library extends React.Component {
     }
 
     render() {
-        console.log( this.state.posts );
-        return this.state.posts ? <PostList data={ this.state.posts }/> : false
+        return this.state.posts ? <PostList data={ this.state.posts }/> : <Loader/>
     }
 }
 

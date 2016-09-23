@@ -13,5 +13,9 @@ export default class ControllerREST {
 
     static getTopPost() {}
 
-    static getAboutData() {}
+    static getAboutData() {
+        axios.get( API.GET_ABOUT_ME ).then( r => this.setState( {
+            aboutData: Mapper.mapAboutMe( r.data )
+        } ) ).catch( e => console.error( e ) )
+    }
 }
