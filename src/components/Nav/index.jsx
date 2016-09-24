@@ -68,7 +68,7 @@ export default class Nav extends React.Component {
                                     className={ item.active ? "active" : "" }
                                     onMouseOver={ this.__onMouseOver.bind( this, i ) }
                                     onMouseOut={ this.__onMouseOut.bind( this, i ) }>
-                                    <Link to={ item.url } onClick={ this.__onClick.bind( this, i ) }>{ item.title }</Link>
+                                    <Link to={ item.url } onClick={ this.__onClick.bind( this, i ) }>{ i !== 0 && item.title }</Link>
                                     { item.children && item.children.length && this.__renderSubMenu( item ) }
                                 </li>
                             )
