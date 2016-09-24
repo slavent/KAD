@@ -15,7 +15,7 @@ export default class AboutMe extends React.Component {
                 <div className="about__photo"><img src={ photo }/></div>
                 <div className="box">
                     <div className="about__title">Обо мне</div>
-                    <div className="about__desc">{ desc }</div>
+                    <div className="about__desc" dangerouslySetInnerHTML={{ __html: desc }}></div>
                 </div>
             </div>
         )

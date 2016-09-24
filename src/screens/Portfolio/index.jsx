@@ -33,7 +33,7 @@ export default class Portfolio extends React.Component {
                 </div>
                 <div className="port__info">
                     <div className="port__title">{ title }</div>
-                    <div className="port__desc">{ desc }</div>
+                    <div className="port__desc" dangerouslySetInnerHTML={{ __html: desc }}></div>
                 </div>
             </div>
         )

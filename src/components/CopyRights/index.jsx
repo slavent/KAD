@@ -7,8 +7,8 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div className="copy">
-                Сайт учителя - Корлотяну Аллы Дмитриевны<br/>
-                При копировании ссылка на источник обязательна
+                Корлотяну Алла Дмитриевна. 2016<br/>
+                При копировании ссылка на источник обязательна.
             </div>
         )
     }
