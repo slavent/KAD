@@ -25,3 +25,7 @@ export function mapPhotos( data ) {
 
     return newData
 }
+
+export function mapPortfolio( data ) {
+    return _.pick( data, "acf" ).acf
+}
