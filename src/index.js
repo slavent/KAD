@@ -9,6 +9,7 @@ import {
 } from "react-router"
 import Layout from "components/Layout"
 import Main from "screens/Main"
+import MyClass from "screens/MyClass"
 import Portfolio from "screens/Portfolio"
 import Gallery from "screens/Gallery"
 import GalleryItem from "screens/Gallery/Item"
@@ -21,6 +22,7 @@ ReactDOM.render( (
     <Router history={ browserHistory }>
         <Route path="/" component={ Layout }>
             <IndexRoute component={ Main }/>
+            <Route path="my-class" component={ MyClass }/>
             <Route path="portfolio" component={ Portfolio }/>
             <Route path="gallery" component={ Gallery }/>
             <Route path="gallery/item" component={ GalleryItem }/>

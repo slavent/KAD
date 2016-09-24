@@ -7,6 +7,10 @@ let data = [ {
     title: "Главная",
     active: true
 }, {
+    url: "/my-class",
+    title: "1Б",
+    active: false
+}, {
     url: "/portfolio",
     title: "Портфолио",
     active: false
