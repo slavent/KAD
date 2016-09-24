@@ -27,6 +27,9 @@ let data = [ {
     }, {
         url: "/library/for-children",
         title: "Ученикам"
+    }, {
+        url: "/library/links",
+        title: "Полезные ссылки"
     } ]
 }, {
     url: "/gallery",
