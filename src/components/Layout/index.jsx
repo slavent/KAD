@@ -10,13 +10,15 @@ export default class Layout extends React.Component {
     render() {
         return (
             <div>
-                <header>
-                    <Logo/>
-                </header>
-                <Nav/>
-                <main>
-                    <div className="wrp">{ this.props.children }</div>
-                </main>
+                <div className="main-wrp">
+                    <header>
+                        <Logo/>
+                    </header>
+                    <Nav/>
+                    <main>
+                        <div className="wrp">{ this.props.children }</div>
+                    </main>
+                </div>
                 <footer>
                     <CopyRights/>
                 </footer>

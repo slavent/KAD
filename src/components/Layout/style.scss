@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 body {
     background: #f7f7f7;
     color: #2f2e2e;
@@ -5,6 +9,10 @@ body {
     font-family: 'PT Sans', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.main-wrp {
+    min-height: 100%;
 }
 
 .wrp {
@@ -38,11 +46,16 @@ main {
     display: table;
     width: 100%;
     margin: 0 0 50px 0;
+    min-height: 390px;
+    padding: 0 0 100px 0;
 }
 
 footer {
     border-top: 1px solid #cacaca;
     padding: 20px 0;
+    height: 100px;
+    margin: -100px 0 0;
     clear: both;
     line-height: 1.4;
+    box-sizing: border-box;
 }
