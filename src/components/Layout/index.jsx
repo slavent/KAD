@@ -2,20 +2,24 @@
  * @author: Kozinets Svyatoslav
  */
 import "./style.scss"
-import Header from "components/Header"
+import Logo from "components/Logo"
 import Nav from "components/Nav"
-import Footer from "components/Footer"
+import CopyRights from "components/CopyRights"
 
 export default class Layout extends React.Component {
     render() {
         return (
             <div>
-                <Header/>
+                <header>
+                    <Logo/>
+                </header>
                 <Nav/>
                 <main>
                     <div className="wrp">{ this.props.children }</div>
                 </main>
-                <Footer/>
+                <footer>
+                    <CopyRights/>
+                </footer>
             </div>
         )
     }

@@ -26,7 +26,8 @@ ReactDOM.render( (
             <Route path="gallery/item" component={ GalleryItem }/>
             <Route path="sitemap" component={ SiteMap }/>
             <Route path="library" component={ Library }/>
-            <Route path="library/item" component={ LibraryItem }/>
+            <Route path="library/:category" component={ Library }/>
+            <Route path="library/:category/:item" component={ LibraryItem }/>
             <Route path="guestbook" component={ GuestBook }/>
         </Route>
     </Router>

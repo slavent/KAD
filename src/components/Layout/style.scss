@@ -27,8 +27,22 @@ body {
     padding: 20px;
 }
 
+header {
+    height: 400px;
+    background: url(i/EFenkN3I96A.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
 main {
     display: table;
     width: 100%;
     margin: 0 0 50px 0;
+}
+
+footer {
+    border-top: 1px solid #cacaca;
+    padding: 20px 0;
+    clear: both;
+    line-height: 1.4;
 }

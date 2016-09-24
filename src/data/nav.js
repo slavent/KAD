@@ -15,13 +15,13 @@ let data = [ {
     title: "Копилка знаний",
     active: false,
     children: [ {
-        url: "/for-parents",
+        url: "/library/for-parents",
         title: "Для родителей"
     }, {
-        url: "/for-teachers",
+        url: "/library/for-teachers",
         title: "Для учителей"
     }, {
-        url: "/for-children",
+        url: "/library/for-children",
         title: "Ученикам"
     } ]
 }, {

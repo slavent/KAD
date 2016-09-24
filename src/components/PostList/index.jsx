@@ -2,6 +2,9 @@
  * @author: Kozinets Svyatoslav
  */
 import "./style.scss"
+import {
+    Link
+} from "react-router"
 
 export default class PostList extends React.Component {
     render() {
@@ -14,7 +17,7 @@ export default class PostList extends React.Component {
                             <div className="posts__title">{ item.title }</div>
                             <div className="posts__desc">{ item.desc }</div>
                             <div className="posts__photo"><img src={ item.photo }/></div>
-                            <a href="" className="posts__more">читать дальше</a>
+                            <Link to={ "/library/for-children/" + item.id } className="posts__more">читать дальше</Link>
                         </div>
                     )
                 } ) }
