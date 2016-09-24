@@ -68,7 +68,8 @@ module.exports = {
 		alias: {
 			components: path.resolve( "./src/components/" ),
 			process: path.resolve( "./src/process/" ),
-			screens: path.resolve( "./src/screens/" )
+			screens: path.resolve( "./src/screens/" ),
+			data: path.resolve( "./src/data/" )
 		},
 		fallback: path.join( __dirname, "node_modules" )
 	},

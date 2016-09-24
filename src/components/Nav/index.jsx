@@ -5,12 +5,14 @@ import "./style.scss"
 import {
     Link
 } from "react-router"
-import Props from "./props"
+import NavMap from "data/nav"
 
 export default class Nav extends React.Component {
     constructor( props ) {
         super( props )
-        this.state = props
+        this.state = {
+            data: NavMap
+        }
     }
 
     __onMouseOver( index ) {
@@ -77,5 +79,3 @@ export default class Nav extends React.Component {
         )
     }
 }
-
-Nav.defaultProps = Props

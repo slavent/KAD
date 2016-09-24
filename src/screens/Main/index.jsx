@@ -8,12 +8,15 @@ export default class Main extends React.Component {
     constructor( props ) {
         super( props )
         this.state = {
-            posts: null
+            posts: null,
+            topPosts: null,
+            aboutData: null
         }
     }
 
     componentDidMount() {
         ControllerREST.getPosts.call( this )
+        ControllerREST.getTopPosts.call( this )
         ControllerREST.getAboutData.call( this )
     }
 
@@ -22,7 +25,7 @@ export default class Main extends React.Component {
             <div>
                 <div className="content">{ this.state.posts && ControllerRender.renderPostList.call( this ) }</div>
                 <div className="sidebar">
-                    { ControllerRender.renderTopPosts.call( this ) }
+                    { this.state.topPosts && ControllerRender.renderTopPosts.call( this ) }
                     { this.state.aboutData && ControllerRender.renderAboutInfo.call( this ) }
                 </div>
             </div>
