@@ -50,7 +50,7 @@ export default class Nav extends React.Component {
 
     __renderSubMenu( data ) {
         return (
-            <ul className="sub" style={{ display: data.hovered ? "block" : "none" }}> { data.children.map( ( item, i ) => {
+            <ul className="submenu" style={{ display: data.hovered ? "block" : "none" }}> { data.children.map( ( item, i ) => {
                 return <li key={ i }><Link to={ item.url }>{ item.title }</Link></li>
             } ) } </ul>
         )
@@ -60,7 +60,7 @@ export default class Nav extends React.Component {
         return (
             <nav>
                 <div className="wrp">
-                    <ul>
+                    <ul className="mainmenu">
                         { this.state.data.map( ( item, i ) => {
                             return (
                                 <li 

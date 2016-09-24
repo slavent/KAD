@@ -1,7 +1,11 @@
 nav {
     display: table;
     width: 100%;
-    margin: -20px 0 60px 0;
+    margin: -10px 0 60px 0;
+
+    .mainmenu {
+        text-align: center;
+    }
 
     ul {
         margin: 0;
@@ -35,7 +39,7 @@ nav {
         font-size: 18px;
     }
 
-    .sub {
+    .submenu {
         display: none;
         position: absolute;
         left: 0;
