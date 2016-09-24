@@ -1,6 +1,7 @@
 /**
  * @author: Kozinets Svyatoslav
  */
+import React from "react"
 import "./style.scss"
 import {
     Link
