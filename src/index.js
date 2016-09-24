@@ -15,7 +15,6 @@ import GalleryItem from "screens/Gallery/Item"
 import SiteMap from "screens/SiteMap"
 import Library from "screens/Library"
 import LibraryItem from "screens/Library/Item"
-import Search from "screens/Search"
 import GuestBook from "screens/GuestBook"
 
 ReactDOM.render( (
@@ -28,7 +27,6 @@ ReactDOM.render( (
             <Route path="sitemap" component={ SiteMap }/>
             <Route path="library" component={ Library }/>
             <Route path="library/item" component={ LibraryItem }/>
-            <Route path="search" component={ Search }/>
             <Route path="guestbook" component={ GuestBook }/>
         </Route>
     </Router>

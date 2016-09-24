@@ -69,7 +69,8 @@ module.exports = {
 			components: path.resolve( "./src/components/" ),
 			process: path.resolve( "./src/process/" ),
 			screens: path.resolve( "./src/screens/" ),
-			data: path.resolve( "./src/data/" )
+			data: path.resolve( "./src/data/" ),
+			node_modules: path.resolve( "./node_modules/" ),
 		},
 		fallback: path.join( __dirname, "node_modules" )
 	},

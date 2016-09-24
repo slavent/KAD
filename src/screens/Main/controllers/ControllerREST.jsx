@@ -11,7 +11,7 @@ export default class ControllerREST {
         } ) ).catch( e => console.error( e ) )
     }
 
-    static getTopPost() {}
+    static getTopPosts() {}
 
     static getAboutData() {
         axios.get( API.GET_ABOUT_ME ).then( r => this.setState( {
