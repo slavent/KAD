@@ -8,7 +8,7 @@ export default class PhotoAlbum extends React.Component {
     constructor( props ) {
         super( props )
         this.state = {
-            data: props.data[ 0 ].photos
+            data: props.data
         }
     }
 
@@ -20,6 +20,7 @@ export default class PhotoAlbum extends React.Component {
         return (
             <div className="album">
                 { this.state.data.map( ( item, i ) => {
+                    debugger
                     return (
                         <div key={ i } className="album__item js-gallery">
                             <a href={ item.sizes.large } title="1Б класс">
