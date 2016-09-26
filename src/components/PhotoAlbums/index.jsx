@@ -13,8 +13,8 @@ export default class PhotoAlbums extends React.Component {
                 { this.props.data.map( ( item, i ) => {
                     return (
                         <div key={ i } className="albums__item">
-                            <img src="http://lorempixel.com/200/200" className="albums_photo"/>
-                            <div className="albums__title">Название альбома</div>
+                            <img src={ item.cover } className="albums_photo"/>
+                            <div className="albums__title">{ item.title }</div>
                             <Link to={{ pathname: "/gallery/item", query: { id: item.id } }} className="albums__link"></Link>
                         </div>
                     )

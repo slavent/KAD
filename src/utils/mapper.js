@@ -26,16 +26,29 @@ export function mapAboutMe( data ) {
 }
 
 /**
- * маппинг фотографий
+ * маппинг альбомов
  */
 export function mapPhotos( data ) {
     let newData = []
 
     _.filter( data, item => item.categories[ 0 ] === 3 ).map( ( item, i ) => {
-        newData.push( _.pick( _.pick( item, "acf" ).acf, "photos" ) )
+        let newItem = _.pick( item, "acf" ).acf
+        newItem.id = item.id
+        newData.push( newItem )
     } )
 
     return newData
+}
+
+/**
+ * маппинг фотографий альбома
+ */
+export function mapPhotosByAlbumId( data, albumId ) {
+    let albums = _.filter( data, item => item.categories[ 0 ] === 3 )
+    let album = _.first( _.filter( albums, item => item.id == albumId ) )
+    let albumMapped = _.pick( _.pick( album, "acf" ).acf, "photos" ).photos
+
+    return albumMapped
 }
 
 /**
