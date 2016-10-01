@@ -27,6 +27,7 @@ export default class Main extends React.Component {
                 <div className="sidebar">
                     { this.state.topPosts && ControllerRender.renderTopPosts.call( this ) }
                     { this.state.aboutData && ControllerRender.renderAboutInfo.call( this ) }
+                    { ControllerRender.renderDatePicker.call( this ) }
                 </div>
             </div>
         )
