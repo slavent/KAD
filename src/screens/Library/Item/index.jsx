@@ -1,13 +1,24 @@
 /**
  * @author: Kozinets Svyatoslav
  */
+import ControllerREST from "./Controllers/controllerREST"
+import Loader from "components/Loader"
 import Post from "components/Post"
-import Props from "./props"
 
 export default class Item extends React.Component {
+	constructor( props ) {
+		super( props )
+		this.state = {
+			data: null
+		}
+	}
+
+	componentDidMount() {
+		let postId = location.href.split("/")[ 5 ]
+		ControllerREST.getPostData.call( this, postId )
+	}
+
     render() {
-        return <Post data={ this.props.data }/>
+        return this.state.data ? <Post data={ this.state.data }/> : <Loader/>
     }
 }
-
-Item.defaultProps = Props
