@@ -27,9 +27,6 @@ let data = [ {
     }, {
         url: "/library/for-children",
         title: "Ученикам"
-    }, {
-        url: "/library/links",
-        title: "Полезные ссылки"
     } ]
 }, {
     url: "/gallery",
@@ -38,6 +35,10 @@ let data = [ {
 }, {
     url: "/guestbook",
     title: "Гостевая книга",
+    active: false
+}, {
+    url: "/links",
+    title: "Полезные ссылки",
     active: false
 }, {
     url: "/sitemap",
