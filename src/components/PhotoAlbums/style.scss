@@ -2,8 +2,10 @@
 
     &__item {
         position: relative;
-        float: left;
-        margin: 0 20px 40px 20px;
+        display: inline-block;
+        vertical-align: top;
+        width: 200px;
+        margin: 0 28px 40px 28px;
 
         &:hover {
             opacity: .8;
@@ -17,6 +19,8 @@
 
     &__title {
         margin: 10px 0 0;
+        text-align: center;
+        line-height: 1.5;
     }
 
     &__link {
