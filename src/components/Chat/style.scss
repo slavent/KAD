@@ -51,10 +51,6 @@
         border-radius: 5px;
         width: 70%;
         clear: both;
-
-        &:nth-child(odd) {
-            float: right;
-        }   
     }
 
     &__author {
@@ -68,7 +64,7 @@
     }
 
     &__msg {
-        height: 1.4;
+        height: 1.5;
         margin: 10px 0 0;
     }
 }
