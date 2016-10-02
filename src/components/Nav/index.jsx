@@ -15,6 +15,9 @@ export default class Nav extends React.Component {
         }
     }
 
+    /**
+     * обработчик наведения мыши
+     */
     __onMouseOver( index ) {
         let data = this.state.data
         data.map( ( item, i ) => {
@@ -26,6 +29,9 @@ export default class Nav extends React.Component {
         } )
     }
 
+    /**
+     * обработчик уведения мыши
+     */
     __onMouseOut() {
         let data = this.state.data
         data.map( ( item, i ) => {
@@ -37,6 +43,9 @@ export default class Nav extends React.Component {
         } )
     }
 
+    /**
+     * обработчик клика
+     */
     __onClick( index ) {
         let data = this.state.data
         data.map( ( item, i ) => {
@@ -48,6 +57,9 @@ export default class Nav extends React.Component {
         } )
     }
 
+    /**
+     * рендер подменю
+     */
     __renderSubMenu( data ) {
         return (
             <ul className="submenu" style={{ display: data.hovered ? "block" : "none" }}> { data.children.map( ( item, i ) => {

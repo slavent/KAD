@@ -3,6 +3,9 @@
  */
 
 export default class ControllerUI {
+	/**
+	 * инициализация календаря
+	 */
 	static init() {
 		function Calendar2( id, year, month ) {
 			var Dlast = new Date( year, month + 1, 0 ).getDate(),
@@ -53,5 +56,12 @@ export default class ControllerUI {
 		document.querySelector( '.datepicker__btn-prev' ).onclick = function() {
 			Calendar2( "calendar2", document.querySelector( '.datepicker__subtitle' ).dataset.year, parseFloat( document.querySelector( '.datepicker__subtitle' ).dataset.month ) + 1 );
 		}
+	}
+
+	/**
+	 * подсветка дней рождений
+	 */
+	static highlightDate( data ) {
+
 	}
 }

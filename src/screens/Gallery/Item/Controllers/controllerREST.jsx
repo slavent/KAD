@@ -5,6 +5,9 @@ import API from "utils/api"
 import * as Mapper from "utils/mapper"
 
 export default class ControllerREST {
+	/**
+	 * получение данных для фотографии
+	 */
 	static getPhotos( albumId ) {
 		axios.get( API.GET_PHOTOS ).then( r => {
 			this.setState( {

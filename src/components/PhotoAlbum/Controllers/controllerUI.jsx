@@ -5,6 +5,9 @@ import "node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"
 import "node_modules/magnific-popup/dist/magnific-popup.css"
 
 export default class ControllerUI {
+    /**
+     * инициализация попапа
+     */
     static createGalleryPopups() {
         $( ".js-gallery" ).magnificPopup( {
             delegate: "a",

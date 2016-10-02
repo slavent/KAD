@@ -8,6 +8,9 @@ import {
 import NavMap from "data/nav"
 
 export default class SiteMap extends React.Component {
+    /**
+     * рендер подразделов
+     */
     __renderSubMenu( data ) {
         return (
             <ul> { data.children.map( ( item, i ) => {

@@ -4,9 +4,28 @@
 import "./style.scss"
 import ControllerUI from "./Controllers/controllerUI"
 
+let data = [ {
+    id: 0,
+    name: "Ivanov Ivan Ivanovich",
+    date: "21/03/1891"
+}, {
+    id: 2,
+    name: "Ivanov Ivan Ivanovich",
+    date: "21/03/1891"
+}, {
+    id: 3,
+    name: "Ivanov Ivan Ivanovich",
+    date: "21/03/1891"
+}, {
+    id: 4,
+    name: "Ivanov Ivan Ivanovich",
+    date: "21/03/1891"
+} ]
+
 export default class DatePicker extends React.Component {
     componentDidMount() {
         ControllerUI.init()
+        ControllerUI.higlightDate( data )
     }
 
     render() {

@@ -5,11 +5,12 @@ import API from "utils/api"
 import * as Mapper from "utils/mapper"
 
 export default class ControllerREST {
-    static getData() {
-        axios.get( API.GET_PORTFOLIO ).then( r => {
-            this.setState( {
-                data: Mapper.mapPortfolio( r.data )
-            } )
-        } ).catch( e => console.error( e ) )
-    }
+	/**
+	 * получения данных
+	 */
+	static getData() {
+		axios.get( API.GET_PORTFOLIO ).then( r => this.setState( {
+			data: Mapper.mapPortfolio( r.data )
+		} ) ).catch( e => console.error( e ) )
+	}
 }
