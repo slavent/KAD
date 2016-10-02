@@ -25,7 +25,7 @@ let data = [ {
 export default class DatePicker extends React.Component {
     componentDidMount() {
         ControllerUI.init()
-        ControllerUI.higlightDate( data )
+        ControllerUI.highlightDate( data )
     }
 
     render() {
