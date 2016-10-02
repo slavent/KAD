@@ -38,6 +38,36 @@
             cursor: pointer;
         }
     }
+
+    &__bday {
+        background: #7eff63;
+        color: #fff !important;
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+            background: green;
+        }
+    }
+
+    &__tooltip {
+        display: none;
+        position: absolute;
+        top: 22px;
+        left: 38px;
+        background: #fff;
+        padding: 10px;
+        color: #212121;
+        border: 1px solid #999
+    }
+
+    &__photo {
+        background: #999;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto 5px auto;
+    }
 }
 
 #calendar2 {

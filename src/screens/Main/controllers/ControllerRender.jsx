@@ -33,7 +33,7 @@ export default class ControllerRender {
 	 * рендер календаря
 	 */
 	static renderDatePicker() {
-		return <DatePicker/>
+		return <DatePicker data={ this.state.childrenData }/>
 	}
 
 	/**

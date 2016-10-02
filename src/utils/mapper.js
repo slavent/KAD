@@ -71,6 +71,20 @@ export function mapPortfolio( data ) {
 }
 
 /**
+ * маппинг учеников
+ */
+export function mapChildren( data ) {
+    let children = _.filter( data, item => item.categories[ 0 ] === 8 )
+    let childrenMapped = []
+
+    children.map( ( item, i ) => {
+        childrenMapped.push( _.pick( item, "acf" ).acf )
+    } )
+
+    return childrenMapped
+}
+
+/**
  * маппинг опроса
  */
 export function mapPoll( data ) {

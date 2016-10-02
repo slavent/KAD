@@ -29,6 +29,15 @@ export default class ControllerREST {
     }
 
     /**
+     * получение данных об учениках
+     */
+    static getChildrenData() {
+        axios.get( API.GET_CHILDREN ).then( r => this.setState( {
+            childrenData: Mapper.mapChildren( r.data )
+        } ) ).catch( e => console.error( e ) )
+    }
+
+    /**
      * получение данных для опроса
      */
     static getPollData() {

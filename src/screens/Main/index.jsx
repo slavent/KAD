@@ -11,6 +11,7 @@ export default class Main extends React.Component {
             posts: null,
             topPosts: null,
             aboutData: null,
+            childrenData: null,
             pollData: null
         }
     }
@@ -19,6 +20,7 @@ export default class Main extends React.Component {
         ControllerREST.getPosts.call( this )
         ControllerREST.getTopPosts.call( this )
         ControllerREST.getAboutData.call( this )
+        ControllerREST.getChildrenData.call( this )
         ControllerREST.getPollData.call( this )
     }
 
@@ -27,6 +29,7 @@ export default class Main extends React.Component {
             posts,
             topPosts,
             aboutData,
+            childrenData,
             pollData
         } = this.state
 
@@ -36,7 +39,7 @@ export default class Main extends React.Component {
                 <div className="sidebar">
                     { topPosts && ControllerRender.renderTopPosts.call( this ) }
                     { aboutData && ControllerRender.renderAboutInfo.call( this ) }
-                    { ControllerRender.renderDatePicker.call( this ) }
+                    { childrenData && ControllerRender.renderDatePicker.call( this ) }
                     { pollData && ControllerRender.renderPoll.call( this ) }
                 </div>
             </div>
