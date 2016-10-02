@@ -1,0 +1,16 @@
+.poll {
+
+	&__question {
+		text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 0 20px 0;
+        text-align: center
+	}
+
+	&__wrp {
+	}
+
+	&__answer {
+		margin: 0 0 5px 0;
+	}
+}

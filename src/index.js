@@ -17,7 +17,7 @@ import SiteMap from "screens/SiteMap"
 import Library from "screens/Library"
 import LibraryItem from "screens/Library/Item"
 import GuestBook from "screens/GuestBook"
-import Links from "sreens/Links"
+import Links from "screens/Links"
 
 ReactDOM.render( (
     <Router history={ browserHistory }>

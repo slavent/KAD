@@ -18,4 +18,10 @@ export default class ControllerREST {
             aboutData: Mapper.mapAboutMe( r.data )
         } ) ).catch( e => console.error( e ) )
     }
+
+    static getPollData() {
+        axios.get( API.GET_POLL ).then( r => this.setState( {
+            pollData: Mapper.mapPoll( r.data )
+        } ) ).catch( e => console.error( e ) )
+    }
 }

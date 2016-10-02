@@ -2,7 +2,7 @@
  * @author Kozinetz Svyatoslav
  */
 import API from "utils/api"
-import * as Mapper from "utils/mappers"
+import * as Mapper from "utils/mapper"
 
 export default class ControllerREST {
 	static getLinks() {

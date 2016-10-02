@@ -18,7 +18,7 @@ export default class Links extends React.Component {
 
 	render() {
 		return (
-			this.state.data ? this.state.data.map( ( item, i ) => {\
+			this.state.data ? this.state.data.map( ( item, i ) => {
 				console.log( item )
 			} ) : <Loader/>
 		)

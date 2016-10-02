@@ -22,8 +22,10 @@ export function mapPosts( data ) {
  * маппинг поста
  */
 export function mapPost( data, postId ) {
-    let posts = mapPosts( data )    
-    let post = _.findWhere( posts, { id: +postId } )
+    let posts = mapPosts( data )
+    let post = _.findWhere( posts, {
+        id: +postId
+    } )
 
     return post
 }
@@ -66,4 +68,11 @@ export function mapPhotosByAlbumId( data, albumId ) {
  */
 export function mapPortfolio( data ) {
     return _.pick( data, "acf" ).acf
+}
+
+/**
+ * маппинг опроса
+ */
+export function mapPoll( data ) {
+    console.log( data )
 }

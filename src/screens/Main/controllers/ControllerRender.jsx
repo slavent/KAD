@@ -5,6 +5,7 @@ import PostList from "components/PostList"
 import TopPosts from "components/TopPosts"
 import AboutMe from "components/AboutMe"
 import DatePicker from "components/Datepicker"
+import Poll from "components/Poll"
 
 export default class ControllerRender {
 	static renderPostList() {
@@ -12,7 +13,7 @@ export default class ControllerRender {
 	}
 
 	static renderTopPosts() {
-		return <TopPosts/>
+		return <TopPosts data={ this.state.TopPosts }/>
 	}
 
 	static renderAboutInfo() {
@@ -21,5 +22,9 @@ export default class ControllerRender {
 
 	static renderDatePicker() {
 		return <DatePicker/>
+	}
+
+	static renderPoll() {
+		return <Poll data={ this.state.pollData }/>
 	}
 }
