@@ -10,6 +10,10 @@ import {
 import Layout from "components/Layout"
 import Main from "screens/Main"
 import MyClass from "screens/MyClass"
+import Sheduler from "screens/Sheduler"
+import Holidays from "screens/Holidays"
+import Ads from "screens/Ads"
+import Congratulations from "screens/Congratulations"
 import Portfolio from "screens/Portfolio"
 import Gallery from "screens/Gallery"
 import GalleryItem from "screens/Gallery/Item"
@@ -24,6 +28,10 @@ ReactDOM.render( (
         <Route path="/" component={ Layout }>
             <IndexRoute component={ Main }/>
             <Route path="my-class" component={ MyClass }/>
+            <Route path="my-class/sheduler" component={ Sheduler }/>
+            <Route path="my-class/holidays" component={ Holidays }/>
+            <Route path="my-class/ads" component={ Ads }/>
+            <Route path="my-class/congratulations" component={ Congratulations }/>
             <Route path="portfolio" component={ Portfolio }/>
             <Route path="gallery" component={ Gallery }/>
             <Route path="gallery/item" component={ GalleryItem }/>

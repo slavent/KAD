@@ -9,7 +9,20 @@ let data = [ {
 }, {
     url: "/my-class",
     title: "1Б",
-    active: false
+    active: false,
+    children: [ {
+        url: "/my-class/sheduler",
+        title: "Расписание"
+    }, {
+        url: "/my-class/holidays",
+        title: "Каникулы"
+    }, {
+        url: "/my-class/ads",
+        title: "Объявления"
+    }, {
+        url: "/my-class/congratulations",
+        title: "Поздравления"
+    } ]
 }, {
     url: "/portfolio",
     title: "Портфолио",
