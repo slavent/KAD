@@ -16,7 +16,7 @@ export default class PostList extends React.Component {
                         <div key={ i } className="posts__item box">
                             <div className="posts__category">{ item.category }</div>
                             <div className="posts__title">{ item.title }</div>
-                            <div className="posts__desc">{ item.desc }</div>
+                            <div className="posts__desc" dangerouslySetInnerHTML={{ __html: item.text_preview }}></div>
                             <div className="posts__photo"><img src={ item.photo }/></div>
                             <Link to={ "/library/for-children/" + item.id } className="posts__more">читать дальше</Link>
                         </div>

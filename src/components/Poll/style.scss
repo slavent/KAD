@@ -1,9 +1,12 @@
 .poll {
+	padding: 20px;
+	background: #fff;
+	margin: 20px 0 0;
 
 	&__question {
 		text-transform: uppercase;
         font-weight: bold;
-        margin: 0 0 20px 0;
+        margin: 0 0 25px 0;
         text-align: center
 	}
 
@@ -11,6 +14,26 @@
 	}
 
 	&__answer {
-		margin: 0 0 5px 0;
+		margin: 0 0 15px 0;
+
+		input {
+			display: inline-block;
+			margin: 0 10px 0 0;
+		}
+	}
+
+	&__btn {
+		padding: 10px 20px;
+		border: none;
+		color: #fff;
+		background: #6eef53;
+		margin: 20px auto 0 auto;
+		display: block;
+		outline: none;
+
+		&:hover {
+			cursor: pointer;
+			opacity: .8;
+		}
 	}
 }

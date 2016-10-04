@@ -16,7 +16,7 @@ export default class Post extends React.Component {
                 <div className="post__photo" style={{ background: "url(" + photo + ")" }}>
                     <div className="post__title">{ title }</div>
                 </div>
-                <div className="post__desc">{ desc }</div>
+                <div className="post__desc" dangerouslySetInnerHTML={{ __html: desc }}></div>
             </div>
         )
     }
