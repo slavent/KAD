@@ -40,9 +40,10 @@
     }
 
     &__bday {
-        background: #7eff63;
+        background: #46b32f;
         color: #fff !important;
         position: relative;
+        transition: all .3s;
 
         &:hover {
             cursor: pointer;

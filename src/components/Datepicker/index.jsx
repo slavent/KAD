@@ -12,7 +12,7 @@ export default class DatePicker extends React.Component {
     render() {
         return (
             <div className="datepicker">
-                <div className="datepicker__title">Календарь дней рождений</div>
+                <div className="datepicker__title">Календарь праздников класса</div>
                 <div className="datepicker__wrp">
                     <div className="datepicker__btn-next">&#8592;</div>
                     <div className="datepicker__subtitle"></div>
