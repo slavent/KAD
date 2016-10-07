@@ -3,11 +3,26 @@
  */
 import "./style.scss"
 import {
-    Link
+	Link
 } from "react-router"
 
 export default class Logo extends React.Component {
-    render() {
-        return <Link to="/" className="logo"></Link>
-    }
+	componentDidMount() {
+		$( ".logo" ).mouseenter( () => {
+			var audio = document.getElementsByTagName( "audio" )[ 0 ]
+			audio.play()
+		} )
+	}
+
+	render() {
+		return (
+			<div>
+        		<audio className="ring">
+					<source src="../../media/ring.mp3"></source>
+					Your browser isn't invited for super fun audio time.
+				</audio>
+        		<Link to="/" className="logo"></Link>
+        	</div>
+		)
+	}
 }

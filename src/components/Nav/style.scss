@@ -31,9 +31,15 @@ nav {
         text-decoration: none;
         font-size: 18px;
         letter-spacing: 1px;
+        transition: all .3s;
+
+        &:hover {
+            background: #666;
+        }
     }
 
     .submenu {
+        border-top: 3px solid #fff;
         display: none;
         position: absolute;
         left: 0;
@@ -47,7 +53,11 @@ nav {
         }
 
         a {
-            background: #500101;
+            background: #2f2e2e;
+
+            &:hover {
+                background: #666;
+            }
         }
     }
 }

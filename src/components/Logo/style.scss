@@ -9,4 +9,11 @@
     top: 15px;
     left: 50%;
     margin: 0 0 0 -75px;
+    transition: all .3s;
+
+    &:hover {
+        -ms-transform: rotate(14deg); /* IE 9 */
+        -webkit-transform: rotate(14deg); /* Chrome, Safari, Opera */
+        transform: rotate(14deg);
+    }
 }

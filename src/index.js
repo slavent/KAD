@@ -22,6 +22,7 @@ import Library from "screens/Library"
 import LibraryItem from "screens/Library/Item"
 import GuestBook from "screens/GuestBook"
 import Links from "screens/Links"
+import Search from "screens/Search"
 
 ReactDOM.render( (
     <Router history={ browserHistory }>
@@ -41,6 +42,7 @@ ReactDOM.render( (
             <Route path="library/:category/:item" component={ LibraryItem }/>
             <Route path="guestbook" component={ GuestBook }/>
             <Route path="links" component={ Links }/>
+            <Route path="search" component={ Search }/>
         </Route>
     </Router>
 ), document.getElementById( "app" ) )

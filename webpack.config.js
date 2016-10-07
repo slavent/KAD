@@ -41,6 +41,9 @@ module.exports = {
 		}, {
 			test: /\.eot(\?.+)?$/,
 			loader: "file-loader?limit=8192&name=fonts/[hash].[ext]"
+		}, {
+			test: /\.mp3(\?.+)?$/,
+			loader: "file-loader?name=media/[hash].[ext]"
 		} ]
 	},
 	plugins: [
