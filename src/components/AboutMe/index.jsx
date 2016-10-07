@@ -2,6 +2,9 @@
  * @author: Kozinets Svyatoslav
  */
 import "./style.scss"
+import {
+    Link
+} from "react-router"
 
 export default class AboutMe extends React.Component {
     render() {
@@ -17,6 +20,7 @@ export default class AboutMe extends React.Component {
                     <div className="about__title">Обо мне</div>
                     <div className="about__desc" dangerouslySetInnerHTML={{ __html: desc }}></div>
                 </div>
+                <Link to="/portfolio" className="about__link"></Link>
             </div>
         )
     }

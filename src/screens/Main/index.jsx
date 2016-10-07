@@ -3,6 +3,7 @@
  */
 import ControllerRender from "./controllers/ControllerRender"
 import ControllerREST from "./controllers/ControllerREST"
+import Loader from "components/Loader"
 
 export default class Main extends React.Component {
     constructor( props ) {
@@ -30,8 +31,10 @@ export default class Main extends React.Component {
             topPosts,
             aboutData,
             childrenData,
-            pollData
+            // pollData
         } = this.state
+
+        if ( !posts || !aboutData || !childrenData ) return <Loader/>
 
         return (
             <div>

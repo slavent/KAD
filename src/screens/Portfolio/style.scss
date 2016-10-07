@@ -4,7 +4,9 @@
 
     &__photo {
         float: left;
-        width: 40%;
+        /*width: 40%;*/
+        position: fixed;
+        width: 320px;
 
         img {
             width: 100%;

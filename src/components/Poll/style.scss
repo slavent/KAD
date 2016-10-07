@@ -26,14 +26,15 @@
 		padding: 10px 20px;
 		border: none;
 		color: #fff;
-		background: #6eef53;
+		background: #46b32f;
 		margin: 20px auto 0 auto;
 		display: block;
 		outline: none;
+		transition: all .3s;
 
 		&:hover {
 			cursor: pointer;
-			opacity: .8;
+			background: green;
 		}
 	}
 }
