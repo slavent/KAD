@@ -8,7 +8,9 @@ export default class Post extends React.Component {
         let {
             photo,
             title,
-            desc
+            desc,
+            post_file,
+            presentation_file
         } = this.props.data
 
         return (
@@ -17,6 +19,8 @@ export default class Post extends React.Component {
                     <div className="post__title">{ title }</div>
                 </div>
                 <div className="post__desc" dangerouslySetInnerHTML={{ __html: desc }}></div>
+                { post_file && <div className="post__download"><a href={ post_file }>Скачать материал</a></div> }
+                { presentation_file && <div className="post__download"><a href={ presentation_file }>Скачать презентацию</a></div> }
             </div>
         )
     }

@@ -7,8 +7,16 @@
 
     &__title {
         text-transform: uppercase;
-        margin: 20px 0 20px 0;
-        font-weight: bold;
+        margin: 30px 0 20px 0;
+        
+        a {
+            color: #ae3e25;
+            
+            &:hover {
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
     }
 
     &__category {

@@ -60,10 +60,10 @@ export default class Nav extends React.Component {
     /**
      * рендер подменю
      */
-    __renderSubMenu( data ) {
+    __renderSubMenu( data, index ) {
         return (
             <ul className="submenu" style={{ display: data.hovered ? "block" : "none" }}> { data.children.map( ( item, i ) => {
-                return <li key={ i }><Link to={ item.url }>{ item.title }</Link></li>
+                return <li key={ i }><Link to={ item.url } onClick={ this.__onClick.bind( this, index ) }>{ item.title }</Link></li>
             } ) } </ul>
         )
     }
@@ -80,8 +80,10 @@ export default class Nav extends React.Component {
                                     className={ item.active ? "active" : "" }
                                     onMouseOver={ this.__onMouseOver.bind( this, i ) }
                                     onMouseOut={ this.__onMouseOut.bind( this, i ) }>
-                                    <Link to={ item.url } onClick={ this.__onClick.bind( this, i ) }>{ item.title }</Link>
-                                    { item.children && item.children.length && this.__renderSubMenu( item ) }
+                                    { item.children
+                                        ? <a href="#" className="no-click">{ item.title }</a>
+                                        : <Link to={ item.url } onClick={ this.__onClick.bind( this, i ) }>{ item.title }</Link> }
+                                    { item.children && item.children.length && this.__renderSubMenu( item, i ) }
                                 </li>
                             )
                         } ) }
