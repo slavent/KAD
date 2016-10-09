@@ -10,7 +10,8 @@ export default class Library extends React.Component {
     constructor( props ) {
         super( props )
         this.state = {
-            posts: null
+            allPosts: null,
+            catPosts: null
         }
     }
 
@@ -18,8 +19,15 @@ export default class Library extends React.Component {
         ControllerREST.getPosts.call( this )
     }
 
+    componentWillReceiveProps() {
+        this.setState( {
+            catPosts: ControllerREST.getCategoryPosts.call( this )
+        } )
+    }
+
     render() {
-        return this.state.posts ? <PostList data={ this.state.posts }/> : <Loader/>
+        console.log( this.state.catPosts )
+        return this.state.catPosts ? <PostList data={ this.state.catPosts }/> : <Loader/>
     }
 }
 

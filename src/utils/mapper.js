@@ -10,8 +10,8 @@ export function mapPosts( data ) {
 
     _.filter( data, item => item.categories[ 0 ] === 2 ).map( ( item, i ) => {
         let data = _.pick( _.pick( item, "acf" ).acf, "title", "text_preview", "desc", "photo", "category", "post_file", "presentation_file" )
-        data.id = item.id
 
+        data.id = item.id
         newData.push( data )
     } )
 
