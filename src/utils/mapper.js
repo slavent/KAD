@@ -90,3 +90,31 @@ export function mapChildren( data ) {
 export function mapPoll( data ) {
     console.log( data )
 }
+
+/**
+ * @author Kozinets Svyatoslav
+ */
+export function mapSheduler( data ) {
+    return _.pick( _.pick( data, "acf" ).acf, "pic" ).pic
+}
+
+/**
+ * @author Kozinets Svyatoslav
+ */
+export function mapHolidays( data ) {
+    return _.pick( _.pick( data, "acf" ).acf, "pic" ).pic
+}
+
+/**
+ * @author Kozinets Svyatoslav
+ */
+export function mapCongratulations( data ) {
+    console.log( data );
+}
+
+/**
+ * @author Kozinets Svyatoslav
+ */
+export function mapAds( data ) {
+    console.log( data );
+}

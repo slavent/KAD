@@ -5,11 +5,18 @@ import ControllerREST from "./Controllers/controllerREST"
 import Loader from "components/Loader"
 
 export default class Sheduler extends React.Component {
-	componentDidMount() {
-		ControllerREST.getData.call( this )
-	}
+    constructor( props ) {
+        super( props )
+        this.state = {
+            data: null
+        }
+    }
 
-	render() {
-		return this.state.data ? <div>123</div> : <Loader/>
-	}
+    componentDidMount() {
+        ControllerREST.getData.call( this )
+    }
+
+    render() {
+        return this.state.data ? <img src={ this.state.data } style={{ width: "100%" }}/> : <Loader/>
+    }
 }
