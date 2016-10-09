@@ -4,7 +4,6 @@
 import ControllerREST from "./Controllers/controllerREST"
 import PostList from "components/PostList"
 import Loader from "components/Loader"
-import Props from "./props"
 
 export default class Library extends React.Component {
     constructor( props ) {
@@ -26,9 +25,6 @@ export default class Library extends React.Component {
     }
 
     render() {
-        console.log( this.state.catPosts )
         return this.state.catPosts ? <PostList data={ this.state.catPosts }/> : <Loader/>
     }
 }
-
-Library.defaultProps = Props

@@ -26,6 +26,9 @@ export default class ControllerREST {
 		} ).catch( e => console.error( e ) )
 	}
 
+	/**
+	 * получение постов конкретной категории
+	 */
 	static getCategoryPosts( data ) {
 		let category = location.href.split( "/" )[ 4 ]
 		return _.filter( data || this.state.allPosts, item => map[ category ] === item.category )

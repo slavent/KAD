@@ -9,7 +9,11 @@ const API = {
 	GET_PORTFOLIO: "http://peremenka20.ru/wp-json/acf/v2/page/57",
 	GET_LINKS: "http://peremenka20.ru/wp-json/acf/v2/page/507",
 	GET_CHILDREN: "http://peremenka20.ru/wp-json/wp/v2/posts?per_page=100&categories=8",
-	GET_POLL: "http://peremenka20.ru/wp-json/acf/v2/page/507"
+	GET_POLL: "http://peremenka20.ru/wp-json/acf/v2/page/507",
+	GET_SHEDULER: "http://peremenka20.ru/wp-json/acf/v2/page/71",
+	GET_HOLIDAYS: "http://peremenka20.ru/wp-json/acf/v2/page/71",
+	GET_CONGRATULATIONS: "http://peremenka20.ru/wp-json/acf/v2/page/71",
+	GET_ADS: "http://peremenka20.ru/wp-json/acf/v2/page/71"
 }
 
 export default API
