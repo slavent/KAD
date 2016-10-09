@@ -92,29 +92,45 @@ export function mapPoll( data ) {
 }
 
 /**
- * @author Kozinets Svyatoslav
+ * маппинг расписания
  */
 export function mapSheduler( data ) {
     return _.pick( _.pick( data, "acf" ).acf, "pic" ).pic
 }
 
 /**
- * @author Kozinets Svyatoslav
+ * маппинг каникул
  */
 export function mapHolidays( data ) {
     return _.pick( _.pick( data, "acf" ).acf, "pic" ).pic
 }
 
 /**
- * @author Kozinets Svyatoslav
+ * маппинг поздравлений
  */
 export function mapCongratulations( data ) {
-    console.log( data );
+    let newData = []
+
+    _.map( data, ( item, i ) => {
+        let newItem = _.pick( _.pick( item, "acf" ).acf, "title", "desc" )
+        newItem.id = item.id
+        newData.push( newItem )
+    } )
+
+    return newData
 }
 
 /**
- * @author Kozinets Svyatoslav
+ * маппинг объявлений
  */
 export function mapAds( data ) {
-    console.log( data );
+    let newData = []
+
+    _.map( data, ( item, i ) => {
+        let newItem = _.pick( _.pick( item, "acf" ).acf, "title", "desc" )
+        newItem.id = item.id
+        newData.push( newItem )
+    } )
+
+    return newData
 }

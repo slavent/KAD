@@ -1,0 +1,21 @@
+.congrat {
+    
+    &__item {
+        margin: 0 0 20px 0;
+    }
+
+    &__title {
+        font-family: 'Open Sans Bold', sans-serif;
+        font-size: 22px;
+        margin: 0 0 10px 0;
+    }
+
+    &__desc {
+        line-height: 1.4;
+    }
+
+    &__splitter {
+        font-size: 22px;
+        text-align: center;
+    }
+}
