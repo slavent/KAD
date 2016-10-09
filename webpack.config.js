@@ -9,12 +9,12 @@ var
 		plugins: [ "transform-proto-to-assign", "transform-es3-property-literals", "transform-es3-member-expression-literals" ]
 	};
 
-module.exports = {
+var config = {
 	entry: {
 		"kad": path.resolve( __dirname, "src/index" )
 	},
 	output: {
-		publicPath: "",
+		publicPath: "wp-content/themes/twentysixteen/",
 		path: path.resolve( __dirname, "dist" ),
 		filename: "[name].js",
 	},
@@ -113,3 +113,5 @@ if ( NODE_ENV !== "development" ) {
 		}
 	} ) );
 }
+
+module.exports = config
