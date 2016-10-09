@@ -25,10 +25,19 @@
     }
 
     &__download {
-        margin: 20px 0 0;
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        background: url("./i/download.png") 0 0 no-repeat;
+        cursor: pointer;
+        margin: 0 20px 0 0;
+    }
 
-        a {
-            color: #ae3e25;
-        }
+    &__print {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        background: url("./i/printer.png") 0 0 no-repeat;
+        cursor: pointer;
     }
 }

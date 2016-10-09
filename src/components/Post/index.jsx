@@ -19,8 +19,8 @@ export default class Post extends React.Component {
                     <div className="post__title">{ title }</div>
                 </div>
                 <div className="post__desc" dangerouslySetInnerHTML={{ __html: desc }}></div>
-                { post_file && <div className="post__download"><a href={ post_file }>Скачать материал</a></div> }
-                { presentation_file && <div className="post__download"><a href={ presentation_file }>Скачать презентацию</a></div> }
+                { post_file && <a href={ post_file } className="post__download"></a> }
+                <div className="post__print" onClick={ window.print }></div>
             </div>
         )
     }

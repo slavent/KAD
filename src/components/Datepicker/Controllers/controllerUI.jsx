@@ -91,7 +91,8 @@ export default class ControllerUI {
 
 			month === currentMonth && birthDays.push( {
 				number,
-				name: item.name
+				name: item.name,
+				sex: item.sex
 			} )
 		} )
 
@@ -99,9 +100,10 @@ export default class ControllerUI {
 			$cells.each( function( index ) {
 				if ( +$( this ).text() === item.number ) {
 					let $tooltip = $( "<div class='datepicker__tooltip'/>" )
+					let sexClass = item.sex === "м" ? "datepicker__photo-men" : "datepicker__photo-women"
 
 					$tooltip.text( item.name )
-					$tooltip.prepend( $( "<div class='datepicker__photo'/>" ) )
+					$tooltip.prepend( $( "<div class='datepicker__photo " + sexClass + "'/>" ) )
 
 					$( this ).addClass( "datepicker__bday" )
 					$( this ).append( $tooltip )

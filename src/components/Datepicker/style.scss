@@ -65,10 +65,18 @@
 
     &__photo {
         background: #999;
-        width: 80px;
-        height: 80px;
+        width: 64px;
+        height: 64px;
         border-radius: 50%;
         margin: 0 auto 5px auto;
+
+        &-men {
+            background: url("./i/boy.png") 0 0 no-repeat;
+        }
+
+        &-women {
+            background: url("./i/girl.png") 0 0 no-repeat;
+        }
     }
 }
 
