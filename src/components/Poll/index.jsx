@@ -20,7 +20,7 @@ export default class Poll extends React.Component {
 	render() {
 		return (
 			<div className="poll">
-				<div className="poll__question">Зарегистрированны ли Вы на сайте dnevnik.ru?</div>
+				<div className="poll__question">Зарегистрированы ли Вы на сайте dnevnik.ru?</div>
 				{ !this.state.result
 					&& <div className="poll__wrp">
 					<div className="poll__answer"><input type="radio" name="answer" defaultChecked/>Да</div>
