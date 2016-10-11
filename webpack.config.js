@@ -14,7 +14,7 @@ var config = {
 		"kad": path.resolve( __dirname, "src/index" )
 	},
 	output: {
-		publicPath: "wp-content/themes/twentysixteen/",
+		publicPath: NODE_ENV === "development" ? "" : "wp-content/themes/twentysixteen/",
 		path: path.resolve( __dirname, "dist" ),
 		filename: "[name].js",
 	},
