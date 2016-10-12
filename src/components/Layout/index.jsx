@@ -14,6 +14,7 @@ export default class Layout extends React.Component {
                 <div className="main-wrp">
                     <header>
                         <Logo/>
+                        <div className="tools"></div>
                     </header>
                     <Nav/>
                     <main>
