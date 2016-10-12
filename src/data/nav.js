@@ -51,11 +51,11 @@ let data = [ {
     title: "Гостевая книга",
     active: false
 },*/
-    /*{
-    url: "/links",
-    title: "Полезные ссылки",
-    active: false
-},*/
+    {
+        url: "/links",
+        title: "Полезные ссылки",
+        active: false
+    },
     {
         url: "/sitemap",
         title: "Карта сайта",

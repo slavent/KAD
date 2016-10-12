@@ -43,6 +43,7 @@ ReactDOM.render( (
             <Route path="guestbook" component={ GuestBook }/>
             <Route path="links" component={ Links }/>
             <Route path="search" component={ Search }/>
+            <Route path="*" component={ Main }/>
         </Route>
     </Router>
 ), document.getElementById( "app" ) )

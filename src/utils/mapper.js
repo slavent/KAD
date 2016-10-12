@@ -134,3 +134,11 @@ export function mapAds( data ) {
 
     return newData
 }
+
+/**
+ * @author Kozinetz Svyatoslav
+ * @description маппинг полезных ссылок
+ */
+export function mapLinks( data ) {
+    return _.pick( _.pick( data, "acf" ).acf, "desc" ).desc
+}

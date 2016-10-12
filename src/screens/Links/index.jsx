@@ -3,6 +3,7 @@
  */
 import ControllerREST from "./Controllers/controllerREST"
 import Loader from "components/Loader"
+import "./style.scss"
 
 export default class Links extends React.Component {
 	constructor( props ) {
@@ -18,9 +19,7 @@ export default class Links extends React.Component {
 
 	render() {
 		return (
-			this.state.data ? this.state.data.map( ( item, i ) => {
-				console.log( item )
-			} ) : <Loader/>
+			this.state.data ? <div dangerouslySetInnerHTML={{ __html: this.state.data }} className="links"></div> : <Loader/>
 		)
 	}
 }

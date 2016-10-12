@@ -1,0 +1,14 @@
+.links {
+
+	li {
+		margin: 0 0 10px 0;
+
+		a {
+			color: #212e2e;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
