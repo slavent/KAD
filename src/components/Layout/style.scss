@@ -13,6 +13,28 @@ body {
 
 .main-wrp {
     min-height: 100%;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 222px;
+        left: 0;
+        bottom: 0;
+        background: url(i/background-leftt.png) 0 0 repeat-y;
+        width: 175px;
+        height: 1264px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 222px;
+        right: 0;
+        bottom: 0;
+        background: url(i/background-right.png) 0 0 repeat-y;
+        width: 175px;
+        height: 1264px;
+    }
 }
 
 .wrp {
