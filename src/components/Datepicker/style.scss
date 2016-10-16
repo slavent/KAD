@@ -39,7 +39,7 @@
         }
     }
 
-    &__bday {
+    &__bday, &__holiday {
         background: #46b32f;
         color: #fff !important;
         position: relative;
@@ -48,6 +48,14 @@
         &:hover {
             cursor: pointer;
             background: green;
+        }
+    }
+
+    &__holiday {
+        background: #ff9900;
+
+        &:hover {
+            background: #da8300;
         }
     }
 

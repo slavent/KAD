@@ -1,6 +1,7 @@
 /**
  * @author Kozinets Svyatoslav
  */
+import holidays from "data/holidays"
 
 /**
  * маппинг всех постов
@@ -66,17 +67,21 @@ export function mapPortfolio( data ) {
 }
 
 /**
- * маппинг учеников
+ * маппинг праздников и дней рождений
  */
-export function mapChildren( data ) {
-    let children = _.filter( data, item => item.categories[ 0 ] === 8 )
-    let childrenMapped = []
+export function mapDataForDatepicker( data ) {
+    let dataMapped = []
+    data = _.filter( data, item => item.categories[ 0 ] === 8 )
 
-    children.map( ( item, i ) => {
-        childrenMapped.push( _.pick( item, "acf" ).acf )
+    data.map( ( item, i ) => {
+        dataMapped.push( _.pick( item, "acf" ).acf )
     } )
 
-    return childrenMapped
+    holidays.map( ( item, i ) => {
+        dataMapped.push( item )
+    } )
+
+    return dataMapped
 }
 
 /**

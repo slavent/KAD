@@ -100,12 +100,23 @@ export default class ControllerUI {
 			$cells.each( function( index ) {
 				if ( +$( this ).text() === item.number ) {
 					let $tooltip = $( "<div class='datepicker__tooltip'/>" )
-					let sexClass = item.sex === "м" ? "datepicker__photo-men" : "datepicker__photo-women"
+					let sexClass = null
+
+					switch ( item.sex ) {
+						case "м":
+							sexClass = "datepicker__photo-men"
+							break
+						case "ж":
+							sexClass = "datepicker__photo-women"
+							break
+						default:
+							sexClass = null
+					}
 
 					$tooltip.text( item.name )
-					$tooltip.prepend( $( "<div class='datepicker__photo " + sexClass + "'/>" ) )
+					sexClass && $tooltip.prepend( $( "<div class='datepicker__photo " + sexClass + "'/>" ) )
 
-					$( this ).addClass( "datepicker__bday" )
+					$( this ).addClass( sexClass ? "datepicker__bday" : "datepicker__holiday" )
 					$( this ).append( $tooltip )
 				}
 			} )

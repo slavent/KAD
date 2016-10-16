@@ -5,7 +5,7 @@
   "main": "src/index.jsx",
   "scripts": {
     "init": "npm i webpack webpack-dev-server -g --ignore-scripts --verbose && npm i --ignore-scripts --verbose",
-    "dev": "set NODE_ENV=development && cp index.html dist/ && webpack-dev-server --host 0.0.0.0 --port 8080",
+    "dev": "set NODE_ENV=development && cp index.html dist/ && cp favicon.ico dist/ && webpack-dev-server --host 0.0.0.0 --port 8080",
     "prod": "set NODE_ENV=production && webpack",
     "test": "mocha tests --require ignore-styles --compilers js:babel-register",
     "prepublish": "eslint src/ && npm run prod"

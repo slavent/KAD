@@ -33,7 +33,7 @@ export default class ControllerREST {
      */
     static getChildrenData() {
         axios.get( API.GET_CHILDREN ).then( r => this.setState( {
-            childrenData: Mapper.mapChildren( r.data )
+            childrenData: Mapper.mapDataForDatepicker( r.data )
         } ) ).catch( e => console.error( e ) )
     }
 
