@@ -17,11 +17,12 @@ export default class Logo extends React.Component {
 	render() {
 		return (
 			<div>
-        		<audio className="ring" controls>
+        		<audio className="ring">
 					<source src="./ring.mp3"></source>
 					Your browser isn't invited for super fun audio time.
 				</audio>
         		<Link to="/" className="logo"></Link>
+        		<Link to="/" className="logo__title"></Link>
         	</div>
 		)
 	}

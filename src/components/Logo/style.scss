@@ -1,17 +1,50 @@
 .logo {
-    background: url(i/betweeen.png) center center no-repeat;
+    background: url(i/logo.png) center center no-repeat;
     background-size: auto 100%;
-    width: 400px;
-    height: 150px;
+    width: 82px;
+    height: 92px;
     position: absolute;
-    top: 16px;
+    top: 15px;
     left: 50%;
-    margin: 0 0 0 -200px;
-    transition: all .3s;
+    margin: 0 0 0 -41px;
+    -webkit-animation: logoAnimation 4s linear infinite; /* Safari 4+ */
+    -moz-animation:    logoAnimation 4s linear infinite; /* Fx 5+ */
+    -o-animation:      logoAnimation 4s linear infinite; /* Opera 12+ */
+    animation:         logoAnimation 4s linear infinite; /* IE 10+, Fx 29+ */
 
-    &:hover {
-        -ms-transform: rotate(14deg); /* IE 9 */
-        -webkit-transform: rotate(14deg); /* Chrome, Safari, Opera */
-        transform: rotate(14deg);
+    &__title {
+        background: url(i/betweeen.png) center center no-repeat;
+        background-size: 100% auto;
+        width: 320px;
+        height: 114px;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        margin: 0 0 0 -160px;
     }
+}
+
+@-webkit-keyframes logoAnimation {
+    0%   { -webkit-transform: rotate( 0deg ) }
+    25%  { -webkit-transform: rotate( -45deg )}
+    75%  { -webkit-transform: rotate( 45deg ) }
+    100% { -webkit-transform: rotate( 0deg ) }
+}
+@-moz-keyframes logoAnimation {
+    0%   { -moz-transform: rotate( 0deg ) }
+    25%  { -moz-transform: rotate( -45deg )}
+    75%  { -moz-transform: rotate( 45deg ) }
+    100% { -moz-transform: rotate( 0deg ) }
+}
+@-o-keyframes logoAnimation {
+    0%   { -o-transform: rotate( 0deg ) }
+    25%  { -o-transform: rotate( -45deg )}
+    75%  { -o-transform: rotate( 45deg ) }
+    100% { -o-transform: rotate( 0deg ) }
+}
+@keyframes logoAnimation {
+    0%   { -webkit-transform: rotate( 0deg ) }
+    25%  { -webkit-transform: rotate( -45deg )}
+    75%  { -webkit-transform: rotate( 45deg ) }
+    100% { -webkit-transform: rotate( 0deg ) }
 }
