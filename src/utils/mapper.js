@@ -136,9 +136,23 @@ export function mapAds( data ) {
 }
 
 /**
- * @author Kozinetz Svyatoslav
- * @description маппинг полезных ссылок
+ * маппинг полезных ссылок
  */
 export function mapLinks( data ) {
     return _.pick( _.pick( data, "acf" ).acf, "desc" ).desc
+}
+
+/**
+ * маппинг результатов поиска
+ */
+export function mapSearchResult( data ) {
+    let newData = []
+
+    _.map( data, ( item, i ) => {
+        let newItem = _.pick( item, "acf" ).acf
+        newItem.id = item.id
+        newData.push( newItem )
+    } )
+
+    return newData
 }

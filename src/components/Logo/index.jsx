@@ -17,8 +17,8 @@ export default class Logo extends React.Component {
 	render() {
 		return (
 			<div>
-        		<audio className="ring">
-					<source src="../../media/ring.mp3"></source>
+        		<audio className="ring" controls>
+					<source src="./ring.mp3"></source>
 					Your browser isn't invited for super fun audio time.
 				</audio>
         		<Link to="/" className="logo"></Link>

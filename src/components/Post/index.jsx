@@ -8,6 +8,7 @@ export default class Post extends React.Component {
         let {
             photo,
             title,
+            category,
             desc,
             post_file,
             presentation_file
@@ -16,7 +17,7 @@ export default class Post extends React.Component {
         return (
             <div className="post">
                 <div className="post__photo" style={{ background: "url(" + photo + ")" }}>
-                    <div className="post__title">{ title }</div>
+                    <div className="post__title">{ category }: { title }</div>
                 </div>
                 <div className="post__desc" dangerouslySetInnerHTML={{ __html: desc }}></div>
                 { post_file && <a href={ post_file } className="post__download"></a> }

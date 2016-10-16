@@ -55,17 +55,15 @@ let data = [ {
         url: "/links",
         title: "Полезные ссылки",
         active: false
-    },
-    {
+    }, {
         url: "/sitemap",
         title: "Карта сайта",
         active: false
+    }, {
+        url: "/search",
+        title: "Поиск",
+        active: false
     }
-    /*, {
-            url: "/search",
-            title: "Поиск",
-            active: false
-        }*/
 ]
 
 export default data

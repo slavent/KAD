@@ -30,7 +30,25 @@
         display: inline-block;
         background: url("./i/download.png") 0 0 no-repeat;
         cursor: pointer;
+        position: relative;
         margin: 0 20px 0 0;
+
+        &:hover:after {
+            display: block;
+        }
+
+        &:after {
+            display: none;
+            content: "печатать";
+            position: absolute;
+            top: 0;
+            left: 65px;
+            background: #fff;
+            color: #2e2e2e;
+            padding: 3px 5px;
+            border-radius: 2px;
+            z-index: 100;
+        }
     }
 
     &__print {
@@ -39,5 +57,23 @@
         display: inline-block;
         background: url("./i/printer.png") 0 0 no-repeat;
         cursor: pointer;
+        position: relative;
+
+        &:hover:after {
+            display: block;
+        }
+
+        &:after {
+            display: none;
+            content: "скачать";
+            position: absolute;
+            top: 0;
+            left: 65px;
+            background: #fff;
+            color: #2e2e2e;
+            padding: 3px 5px;
+            border-radius: 2px;
+            z-index: 100;
+        }
     }
 }

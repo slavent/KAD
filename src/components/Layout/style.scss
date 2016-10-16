@@ -13,6 +13,7 @@ body {
 
 .main-wrp {
     min-height: 100%;
+    position: relative;
 
     &:before {
         content: "";
@@ -22,7 +23,7 @@ body {
         bottom: 0;
         background: url(i/background-leftt.png) 0 0 repeat-y;
         width: 175px;
-        height: 1264px;
+        height: 100%;
     }
 
     &:after {
@@ -33,7 +34,7 @@ body {
         bottom: 0;
         background: url(i/background-right.png) 0 0 repeat-y;
         width: 175px;
-        height: 1264px;
+        height: 100%;
     }
 }
 

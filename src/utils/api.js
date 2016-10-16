@@ -13,7 +13,8 @@ const API = {
 	GET_SHEDULER: "http://peremenka20.ru/wp-json/acf/v2/page/642",
 	GET_HOLIDAYS: "http://peremenka20.ru/wp-json/acf/v2/page/636",
 	GET_CONGRATULATIONS: "http://peremenka20.ru/wp-json/wp/v2/posts?per_page=100&categories=10",
-	GET_ADS: "http://peremenka20.ru/wp-json/wp/v2/posts?per_page=100&categories=9"
+	GET_ADS: "http://peremenka20.ru/wp-json/wp/v2/posts?per_page=100&categories=9",
+	SEARCH: "http://peremenka20.ru/wp-json/wp/v2/posts?search="
 }
 
 export default API

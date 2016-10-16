@@ -23,4 +23,22 @@
 			opacity: .8;
 		}
 	}
+
+	&__title {
+		font-weight: bold;
+		margin: 0 0 20px 0;
+	}
+
+	&__results {
+		clear: both;
+		padding: 20px 0 0;
+	}
+
+	&__item {
+		margin: 0 0 10px 0;
+
+		a {
+			color: #2e2e2e;
+		}
+	}
 }

@@ -14,7 +14,7 @@ var config = {
 		"kad": path.resolve( __dirname, "src/index" )
 	},
 	output: {
-		publicPath: "wp-content/themes/twentysixteen/",
+		publicPath: "", //"wp-content/themes/twentysixteen/",
 		path: path.resolve( __dirname, "dist" ),
 		filename: "[name].js",
 	},
@@ -41,9 +41,6 @@ var config = {
 		}, {
 			test: /\.eot(\?.+)?$/,
 			loader: "file-loader?limit=8192&name=fonts/[hash].[ext]"
-		}, {
-			test: /\.mp3(\?.+)?$/,
-			loader: "file-loader?name=media/[hash].[ext]"
 		} ]
 	},
 	plugins: [
