@@ -21,13 +21,8 @@ export function mapPosts( data ) {
 /**
  * маппинг поста
  */
-export function mapPost( data, postId ) {
-    let posts = mapPosts( data )
-    let post = _.findWhere( posts, {
-        id: +postId
-    } )
-
-    return post
+export function mapPost( data ) {
+    return _.pick( data, "acf" ).acf
 }
 
 /**

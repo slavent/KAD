@@ -14,11 +14,11 @@ export default class Item extends React.Component {
 	}
 
 	componentDidMount() {
-		let postId = location.href.split("/")[ 5 ]
+		let postId = location.href.split( "/" )[ 4 ]
 		ControllerREST.getPostData.call( this, postId )
 	}
 
-    render() {
-        return this.state.data ? <Post data={ this.state.data }/> : <Loader/>
-    }
+	render() {
+		return this.state.data ? <Post data={ this.state.data }/> : <Loader/>
+	}
 }

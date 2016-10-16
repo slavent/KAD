@@ -9,8 +9,8 @@ export default class CotrollerREST {
 	 * получение данных поста
 	 */
 	static getPostData( postId ) {
-		axios.get( API.GET_POSTS ).then( r => this.setState( {
-			data: Mapper.mapPost( r.data, postId )
+		axios.get( API.GET_POST + postId ).then( r => this.setState( {
+			data: Mapper.mapPost( r.data )
 		} )  ).catch( e => console.error( e ) )
 	}
 }

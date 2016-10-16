@@ -32,7 +32,7 @@ export default class Search extends React.Component {
 					{ data && data.length ? data.map( ( item, i ) => {
 						return (
 							<div key={ i } className="search__item">
-								<Link to="">{ i + 1 }. { item.title }</Link>
+								<Link to={ "/post/" + item.id }>{ i + 1 }. { item.title }</Link>
 							</div>
 						)
 					} ) : <div className="search__nofound">По вашему запросу ничего не было найдено.</div> }

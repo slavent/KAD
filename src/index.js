@@ -39,7 +39,7 @@ ReactDOM.render( (
             <Route path="sitemap" component={ SiteMap }/>
             <Route path="library" component={ Library }/>
             <Route path="library/:category" component={ Library }/>
-            <Route path="library/:category/:item" component={ LibraryItem }/>
+            <Route path="post/:id" component={ LibraryItem }/>
             <Route path="guestbook" component={ GuestBook }/>
             <Route path="links" component={ Links }/>
             <Route path="search" component={ Search }/>
