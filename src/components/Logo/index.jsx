@@ -8,10 +8,11 @@ import {
 
 export default class Logo extends React.Component {
 	componentDidMount() {
-		// $( ".logo" ).mouseenter( () => {
-		// 	var audio = document.getElementsByTagName( "audio" )[ 0 ]
-		// 	audio.play()
-		// } )
+		$( ".logo" ).mouseenter( () => {
+			var audio = document.getElementsByTagName( "audio" )[ 0 ]
+			audio.currentTime = 40
+			audio.play()
+		} )
 	}
 
 	render() {
