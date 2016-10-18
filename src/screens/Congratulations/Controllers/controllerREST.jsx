@@ -1,16 +1,29 @@
 /**
- * @author Kozsinrtz Svyatoslav
+ * @author: Kozinets Svyatoslav
  */
-import API from "utils/api"
 import * as Mapper from "utils/mapper"
+import API from "utils/api"
 
 export default class ControllerREST {
-    /**
-     * получение данных
-     */
-    static getData() {
-        axios.get( API.GET_CONGRATULATIONS ).then( r => this.setState( {
-            data: Mapper.mapCongratulations( r.data )
-        } ) ).catch( e => console.error( e ) )
-    }
+	/**
+	 * получение постов
+	 */
+	static getPosts() {
+		axios.get( API.GET_POSTS ).then( r => {
+			let allPosts = Mapper.mapPosts( r.data )
+			let catPosts = ControllerREST.getCategoryPosts.call( this, allPosts )
+
+			this.setState( {
+				allPosts,
+				catPosts
+			} )
+		} ).catch( e => console.error( e ) )
+	}
+
+	/**
+	 * получение постов конкретной категории
+	 */
+	static getCategoryPosts( data ) {
+		return _.filter( data || this.state.allPosts, item => item.category === "Поздравления" )
+	}
 }

@@ -1,23 +1,30 @@
 /**
- * @author Kozinetz Svyatoslav
+ * @author: Kozinets Svyatoslav
  */
 import ControllerREST from "./Controllers/controllerREST"
+import PostList from "components/PostList"
 import Loader from "components/Loader"
-import AdsList from "components/AdsList"
 
 export default class Ads extends React.Component {
     constructor( props ) {
         super( props )
         this.state = {
-            data: null
+            allPosts: null,
+            catPosts: null
         }
     }
 
     componentDidMount() {
-        ControllerREST.getData.call( this )
+        ControllerREST.getPosts.call( this )
+    }
+
+    componentWillReceiveProps() {
+        this.setState( {
+            catPosts: ControllerREST.getCategoryPosts.call( this )
+        } )
     }
 
     render() {
-        return this.state.data ? <AdsList data={ this.state.data }/> : <Loader/>
+        return this.state.catPosts ? <PostList data={ this.state.catPosts }/> : <Loader/>
     }
 }
