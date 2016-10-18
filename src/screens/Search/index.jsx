@@ -28,7 +28,7 @@ export default class Search extends React.Component {
 				<button onClick={ this.__onBtnSearchClick.bind( this ) }>Поиск</button>
 
 				<div className="search__results">
-					{ data && data.length && <div className="search__title">Результаты поиска:</div> }
+					{ data && data.length ? <div className="search__title">Результаты поиска:</div> : null }
 					{ data && data.length ? data.map( ( item, i ) => {
 						return (
 							<div key={ i } className="search__item">
