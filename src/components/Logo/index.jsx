@@ -8,10 +8,14 @@ import {
 
 export default class Logo extends React.Component {
 	componentDidMount() {
-		$( ".logo" ).mouseenter( () => {
-			var audio = document.getElementsByTagName( "audio" )[ 0 ]
+		var audio = document.getElementsByTagName( "audio" )[ 0 ]
+
+		$( ".logo" ).hover( () => {
 			audio.currentTime = 40
 			audio.play()
+		}, () => {
+			audio.pause();
+			audio.currentTime = 0;
 		} )
 	}
 
