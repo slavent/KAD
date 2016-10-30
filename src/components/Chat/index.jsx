@@ -13,6 +13,7 @@ export default class Chat extends React.Component {
 
     componentDidMount() {
         axios.get( "http://chat.peremenka20.ru/" ).then( r => {
+            console.info( "[INFO] GET messages", r.data )
             this.setState( {
                 messages: r.data
             } )
@@ -37,6 +38,8 @@ export default class Chat extends React.Component {
             "mimeType": "multipart/form-data",
             "data": formData
         } ).done( r => {
+            console.info( "[INFO] POST message", formData )
+
             let messages = this.state.messages
             messages.push( {
                 user,
@@ -50,20 +53,6 @@ export default class Chat extends React.Component {
             this.refs.user.value = ""
             this.refs.msg.value = ""
         } )
-
-        // axios.defaults.headers.post[ 'Content-Type' ] = 'multipart/form-data'
-        // axios.post( "http://chat.peremenka20.ru/", {
-        //     id: "4",
-        //     date: "2016-10-03",
-        //     user: "testUser",
-        //     msg: "testMsg"
-        // } ).then( r => {
-        //     this.setState( {
-        //         date: "2016-03-21",
-        //         user: "123",
-        //         msg: "qwrewer"
-        //     } )
-        // } ).catch( e => console.error( e ) )
     }
 
     render() {
