@@ -1,5 +1,19 @@
 .chat {
 
+    &__status {
+        padding: 10px;
+        margin: 0 0 20px 0;
+        color: #fff;
+
+        &-SUCCES {
+            background: #5bae37;
+        }
+
+        &-ERROR {
+            background: #ff5757;
+        }
+    }
+
     &__title {
         text-align: center;
         margin: 0 0 40px 0;

@@ -2,62 +2,32 @@
  * @author: Kozinets Svyatoslav
  */
 import "./style.scss"
+import ControllerREST from "./Controllers/controllerREST"
 
 export default class Chat extends React.Component {
     constructor( props ) {
         super( props )
         this.state = {
-            messages: []
+            messages: [],
+            status: {
+                type: "SUCCESS",
+                msg: null
+            }
         }
     }
 
     componentDidMount() {
-        axios.get( "http://chat.peremenka20.ru/" ).then( r => {
-            console.info( "[INFO] GET messages", r.data )
-            this.setState( {
-                messages: r.data
-            } )
-        } ).catch( e => console.error( e ) )
+        ControllerREST.getMessages.call( this )
     }
 
     __onBtnSendClick() {
-        let user = this.refs.user.value
-        let msg = this.refs.msg.value
-        let formData = new FormData()
-
-        formData.append( "user", user )
-        formData.append( "msg", msg )
-
-        $.ajax( {
-            "async": true,
-            "crossDomain": true,
-            "url": "http://chat.peremenka20.ru/",
-            "method": "POST",
-            "processData": false,
-            "contentType": false,
-            "mimeType": "multipart/form-data",
-            "data": formData
-        } ).done( r => {
-            console.info( "[INFO] POST message", formData )
-
-            let messages = this.state.messages
-            messages.push( {
-                user,
-                msg
-            } )
-
-            this.setState( {
-                messages
-            } )
-
-            this.refs.user.value = ""
-            this.refs.msg.value = ""
-        } )
+        ControllerREST.sendMsg.call( this )
     }
 
     render() {
         let {
-            messages
+            messages,
+            status
         } = this.state
 
         return (
@@ -68,6 +38,7 @@ export default class Chat extends React.Component {
                     Вы можете написать свои пожелания или задать мне интересующие Вас вопросы.
                 </div>
                 <div className="chat__form">
+                    { status && status.msg && <div className={ "chat__status chat__status-" + status.type }>{ status.msg }</div> }
                     <div className="chat__label">Представьтесь:</div>
                     <input type="text" ref="user"/>
                     <div className="chat__label">Ваше сообщение:</div>
@@ -75,7 +46,7 @@ export default class Chat extends React.Component {
                     <button onClick={ this.__onBtnSendClick.bind( this ) }>Отправить</button>
                 </div>
                 <div className="chat__box">
-                    { messages && messages.length && messages.map( ( item, i ) => {
+                    { ( messages && messages.length ) ? messages.map( ( item, i ) => {
                         return (
                             <div key={ i } className="chat__item">
                                 <div className="chat__author">{ item.user }</div>
@@ -83,7 +54,7 @@ export default class Chat extends React.Component {
                                 <div className="chat__msg">{ item.msg }</div>
                             </div>
                         )
-                    } ) }
+                    } ) : null }
                 </div>
             </div>
         )
