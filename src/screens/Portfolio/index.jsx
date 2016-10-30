@@ -3,6 +3,7 @@
  */
 import "./style.scss"
 import ControllerREST from "./Controllers/controllerREST"
+import ControllerUI from "./Controllers/controllerUI"
 import Loader from "components/Loader"
 
 export default class Portfolio extends React.Component {
@@ -15,6 +16,7 @@ export default class Portfolio extends React.Component {
 
     componentDidMount() {
         ControllerREST.getData.call( this )
+        ControllerUI.initPhotoScrolling()
     }
 
     render() {
@@ -28,10 +30,10 @@ export default class Portfolio extends React.Component {
 
         return (
             <div className="port">
-                <div className="port__photo">
+                <div className="port__photo js-port-photo">
                     <img src={ photo }/>
                 </div>
-                <div className="port__info">
+                <div className="port__info js-port-info">
                     <div className="port__title">{ title }</div>
                     <div className="port__desc" dangerouslySetInnerHTML={{ __html: desc }}></div>
                 </div>
