@@ -1,5 +1,11 @@
 .chat {
 
+    &__title {
+        text-align: center;
+        margin: 0 0 40px 0;
+        line-height: 1.5;
+    }
+
     &__form {
         margin: 0 0 30px 0;
         display: table;
@@ -28,6 +34,14 @@
             display: inline-block;
             outline: none;
             float: right;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+
+            &:hover {
+                cursor: pointer;
+                opacity: .8;
+            }
         }
     }
 
