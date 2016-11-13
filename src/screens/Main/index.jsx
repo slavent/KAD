@@ -1,11 +1,14 @@
 /**
  * @author: Kozinets Svyatoslav
  */
+import {
+    connect
+} from "react-redux"
 import ControllerRender from "./controllers/ControllerRender"
 import ControllerREST from "./controllers/ControllerREST"
 import Loader from "components/Loader"
 
-export default class Main extends React.Component {
+class Main extends React.Component {
     constructor( props ) {
         super( props )
         this.state = {
@@ -49,3 +52,12 @@ export default class Main extends React.Component {
         )
     }
 }
+
+function mapStateToProps( state ) {
+    return {
+        posts: state.posts,
+        children: state.children
+    }
+}
+
+export default connect( mapStateToProps )( Main )

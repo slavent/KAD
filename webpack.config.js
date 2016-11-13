@@ -6,7 +6,7 @@ var
 	pack = require( "./package.json" ),
 	babelQuery = {
 		presets: [ "es2015", "react" ],
-		plugins: [ "transform-proto-to-assign", "transform-es3-property-literals", "transform-es3-member-expression-literals" ]
+		plugins: [ "transform-proto-to-assign", "transform-es3-property-literals", "transform-es3-member-expression-literals", "transform-object-rest-spread" ]
 	};
 
 var config = {
