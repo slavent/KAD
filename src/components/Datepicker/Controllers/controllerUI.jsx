@@ -82,7 +82,8 @@ export default class ControllerUI {
 		let $cells = $( ".datepicker td" )
 		let monthName = $( ".datepicker__subtitle" ).text().split( " " )[ 0 ]
 		let currentMonth = +_.invert( monthMap )[ monthName ]
-		let birthDays = []
+		let birthDays = [],
+			days = []
 
 		data.map( ( item, i ) => {
 			let dateArray = item.date.split( "." )
@@ -96,36 +97,48 @@ export default class ControllerUI {
 			} )
 		} )
 
-		birthDays.map( ( item, i ) => {
-			$cells.each( function( index ) {
-				if ( +$( this ).text() === item.number ) {
-					let $tooltip = $( "<div class='datepicker__tooltip'/>" )
-					let sexClass = null
-
-					switch ( item.sex ) {
-						case "м":
-							sexClass = "datepicker__photo-men"
-							break
-						case "ж":
-							sexClass = "datepicker__photo-women"
-							break
-						default:
-							sexClass = null
-					}
-
-					$tooltip.text( item.name )
-					sexClass && $tooltip.prepend( $( "<div class='datepicker__photo " + sexClass + "'/>" ) )
-
-					$( this ).addClass( sexClass ? "datepicker__bday" : "datepicker__holiday" )
-					$( this ).append( $tooltip )
-				}
+		$cells.each( function( item ) {
+			let number = +$( this ).text()
+			number && days.push( {
+				number,
+				$el: $( this )
 			} )
+
+			$( this ).append( "<div class='datepicker__tooltip-wrp'></div>" )
+		} )
+
+		birthDays.map( ( item, i ) => {
+			let bdayObj = _.findWhere( days, {
+				number: item.number
+			} )
+
+			if ( bdayObj ) {
+				let $tooltip = $( "<div class='datepicker__tooltip'/>" )
+				let sexClass = null
+
+				switch ( item.sex ) {
+					case "м":
+						sexClass = "datepicker__photo-men"
+						break
+					case "ж":
+						sexClass = "datepicker__photo-women"
+						break
+					default:
+						sexClass = null
+				}
+
+				$tooltip.text( item.name )
+				sexClass && $tooltip.prepend( $( "<div class='datepicker__photo " + sexClass + "'/>" ) )
+
+				bdayObj.$el.addClass( sexClass ? "datepicker__bday" : "datepicker__holiday" )
+				bdayObj.$el.children().append( $tooltip )
+			}
 		} )
 
 		$cells.hover( function() {
-			$( this ).find( ".datepicker__tooltip" ).stop( true ).fadeIn()
+			$( this ).find( ".datepicker__tooltip-wrp" ).stop( true ).fadeIn()
 		}, function() {
-			$( this ).find( ".datepicker__tooltip" ).stop( true ).fadeOut()
+			$( this ).find( ".datepicker__tooltip-wrp" ).stop( true ).fadeOut()
 		} )
 	}
 }

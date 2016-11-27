@@ -60,15 +60,27 @@
     }
 
     &__tooltip {
-        display: none;
-        position: absolute;
-        z-index: 200;
-        top: 22px;
-        left: 38px;
-        background: #fff;
-        padding: 10px;
-        color: #212121;
-        border: 1px solid #999
+        margin: 0 0 10px 0;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &-wrp {
+            display: none;
+            position: absolute;
+            z-index: 200;
+            top: 22px;
+            left: 38px;
+            background: #fff;
+            padding: 10px;
+            color: #212121;
+            border: 1px solid #999;
+
+            &:hover {
+                cursor: default;
+            }
+        }
     }
 
     &__photo {
