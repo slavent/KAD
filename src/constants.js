@@ -3,7 +3,7 @@
  * ACTIONS
  */
 
-const ACTIONS = {
+let constants = {
 	POSTS: {
 		GET: "GET_POSTS",
 		ADD: "ADD_POST"
@@ -20,4 +20,4 @@ const ACTIONS = {
 	}
 }
 
-export default ACTIONS
+export default constants

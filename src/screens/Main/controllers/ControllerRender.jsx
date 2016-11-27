@@ -7,39 +7,41 @@ import AboutMe from "components/AboutMe"
 import DatePicker from "components/Datepicker"
 import Poll from "components/Poll"
 
-export default class ControllerRender {
+const ControllerRender = SuperClass => class extends SuperClass {
 	/**
 	 * рендер постов
 	 */
-	static renderPostList() {
+	__renderPostList() {
 		return <PostList data={ this.state.posts }/>
 	}
 
 	/**
 	 * рендер топовых постов
 	 */
-	static renderTopPosts() {
+	__renderTopPosts() {
 		return <TopPosts data={ this.state.TopPosts }/>
 	}
 
 	/**
 	 * рендер блока Обо мне
 	 */
-	static renderAboutInfo() {
+	__renderAboutInfo() {
 		return <AboutMe data={ this.state.aboutData }/>
 	}
 
 	/**
 	 * рендер календаря
 	 */
-	static renderDatePicker() {
+	__renderDatePicker() {
 		return <DatePicker data={ this.state.childrenData }/>
 	}
 
 	/**
 	 * рендер опроса
 	 */
-	static renderPoll() {
+	__renderPoll() {
 		return <Poll data={ this.state.pollData }/>
 	}
 }
+
+export default ControllerRender

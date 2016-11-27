@@ -8,7 +8,7 @@ import ControllerRender from "./controllers/ControllerRender"
 import ControllerREST from "./controllers/ControllerREST"
 import Loader from "components/Loader"
 
-class Main extends React.Component {
+class Main extends ControllerREST( ControllerRender( React.Component ) ) {
     constructor( props ) {
         super( props )
         this.state = {
@@ -21,10 +21,10 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        ControllerREST.getPosts.call( this )
-        ControllerREST.getTopPosts.call( this )
-        ControllerREST.getAboutData.call( this )
-        ControllerREST.getChildrenData.call( this )
+        this.__getPosts()
+        this.__getTopPosts()
+        this.__getAboutData()
+        this.__getChildrenData()
             // ControllerREST.getPollData.call( this )
     }
 
@@ -41,12 +41,12 @@ class Main extends React.Component {
 
         return (
             <div>
-                <div className="content">{ posts && ControllerRender.renderPostList.call( this ) }</div>
+                <div className="content">{ posts && this.__renderPostList() }</div>
                 <div className="sidebar">
-                    { topPosts && ControllerRender.renderTopPosts.call( this ) }
-                    { aboutData && ControllerRender.renderAboutInfo.call( this ) }
-                    { childrenData && ControllerRender.renderDatePicker.call( this ) }
-                    { ControllerRender.renderPoll.call( this ) }
+                    { topPosts && this.__renderTopPosts() }
+                    { aboutData && this.__renderAboutInfo() }
+                    { childrenData && this.__renderDatePicker() }
+                    { this.__renderPoll() }
                 </div>
             </div>
         )
