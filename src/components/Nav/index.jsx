@@ -1,38 +1,27 @@
-/**
- * @author: Kozinets Svyatoslav
- */
 import "./style.scss"
-import {
-    Link
-} from "react-router"
+import { Link } from "react-router"
 import NavMap from "data/nav"
 
 export default class Nav extends React.Component {
-    constructor( props ) {
+    constructor ( props ) {
         super( props )
+
         this.state = {
             data: NavMap
         }
     }
 
-    /**
-     * обработчик наведения мыши
-     */
-    __onMouseOver( index ) {
+    onMouseOver ( index ) {
         let data = this.state.data
-        data.map( ( item, i ) => {
-            item.hovered = i === index ? true : false
-        } )
+
+        data.map( ( item, i ) => item.hovered = i === index )
 
         this.setState( {
             data
         } )
     }
 
-    /**
-     * обработчик уведения мыши
-     */
-    __onMouseOut() {
+    onMouseOut () {
         let data = this.state.data
         data.map( ( item, i ) => {
             item.hovered = false
@@ -43,47 +32,48 @@ export default class Nav extends React.Component {
         } )
     }
 
-    /**
-     * обработчик клика
-     */
-    __onClick( index ) {
-        let data = this.state.data
-        data.map( ( item, i ) => {
-            item.active = i === index ? true : false
-        } )
+    onClick ( index ) {
+        let { data } = this.state
+
+        data.map( ( item, i ) => item.active = i === index )
 
         this.setState( {
             data
         } )
     }
 
-    /**
-     * рендер подменю
-     */
-    __renderSubMenu( data, index ) {
+    renderSubMenu ( data, index ) {
         return (
-            <ul className="submenu" style={{ display: data.hovered ? "block" : "none" }}> { data.children.map( ( item, i ) => {
-                return <li key={ i }><Link to={ item.url } onClick={ this.__onClick.bind( this, index ) }>{ item.title }</Link></li>
-            } ) } </ul>
+            <ul className="submenu"
+                style={ { display: data.hovered ? "block" : "none" } }>
+                { data.children.map( ( item, i ) =>
+                    <li key={ i }>
+                        <Link to={ item.url } onClick={ this.onClick.bind( this, index ) }>
+                            { item.title }
+                        </Link>
+                    </li>
+                ) }
+            </ul>
         )
     }
 
-    render() {
+    render () {
         return (
             <nav>
                 <div className="wrp">
                     <ul className="mainmenu">
                         { this.state.data.map( ( item, i ) => {
                             return (
-                                <li 
-                                    key={ i } 
+                                <li
+                                    key={ i }
                                     className={ item.active ? "active" : "" }
-                                    onMouseOver={ this.__onMouseOver.bind( this, i ) }
-                                    onMouseOut={ this.__onMouseOut.bind( this, i ) }>
+                                    onMouseOver={ this.onMouseOver.bind( this, i ) }
+                                    onMouseOut={ this.onMouseOut.bind( this, i ) }>
                                     { item.children
                                         ? <a href="#" className="no-click">{ item.title }</a>
-                                        : <Link to={ item.url } onClick={ this.__onClick.bind( this, i ) }>{ item.title }</Link> }
-                                    { item.children && item.children.length && this.__renderSubMenu( item, i ) }
+                                        : <Link to={ item.url }
+                                                onClick={ this.onClick.bind( this, i ) }>{ item.title }</Link> }
+                                    { item.children && item.children.length && this.renderSubMenu( item, i ) }
                                 </li>
                             )
                         } ) }

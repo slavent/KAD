@@ -1,6 +1,3 @@
-/**
- * @author Kozinetz Svyatoslav
- */
 import {
     Router,
     Route,
@@ -25,25 +22,5 @@ import Links from "screens/Links"
 import Search from "screens/Search"
 
 ReactDOM.render( (
-    <Router history={ browserHistory }>
-        <Route path="/" component={ Layout }>
-            <IndexRoute component={ Main }/>
-            <Route path="my-class" component={ MyClass }/>
-            <Route path="my-class/sheduler" component={ Sheduler }/>
-            <Route path="my-class/holidays" component={ Holidays }/>
-            <Route path="my-class/ads" component={ Ads }/>
-            <Route path="my-class/congratulations" component={ Congratulations }/>
-            <Route path="portfolio" component={ Portfolio }/>
-            <Route path="gallery" component={ Gallery }/>
-            <Route path="gallery/item" component={ GalleryItem }/>
-            <Route path="sitemap" component={ SiteMap }/>
-            <Route path="library" component={ Library }/>
-            <Route path="library/:category" component={ Library }/>
-            <Route path="post/:id" component={ LibraryItem }/>
-            <Route path="guestbook" component={ GuestBook }/>
-            <Route path="links" component={ Links }/>
-            <Route path="search" component={ Search }/>
-            <Route path="*" component={ Main }/>
-        </Route>
-    </Router>
+    <div>13</div>
 ), document.getElementById( "app" ) )
