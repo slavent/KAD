@@ -14,28 +14,28 @@ body {
 .main-wrp {
     min-height: 100%;
     position: relative;
+}
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: 222px;
-        left: 0;
-        bottom: 0;
-        background: url(i/background-leftt.png) 0 0 repeat-y;
-        width: 175px;
-        height: 100%;
-    }
+.main-wrp:before {
+    content: "";
+    position: absolute;
+    top: 222px;
+    left: 0;
+    bottom: 0;
+    background: url(i/background-leftt.png) 0 0 repeat-y;
+    width: 175px;
+    height: 100%;
+}
 
-    &:after {
-        content: "";
-        position: absolute;
-        top: 222px;
-        right: 0;
-        bottom: 0;
-        background: url(i/background-right.png) 0 0 repeat-y;
-        width: 175px;
-        height: 100%;
-    }
+.main-wrp:after {
+    content: "";
+    position: absolute;
+    top: 222px;
+    right: 0;
+    bottom: 0;
+    background: url(i/background-right.png) 0 0 repeat-y;
+    width: 175px;
+    height: 100%;
 }
 
 .wrp {
@@ -64,28 +64,28 @@ header {
     background: #ffba00;
     position: relative;
     border-bottom: 2px dashed #fff;
+}
 
-    &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        background: url(i/left.png) 0 0 no-repeat;
-        background-size: auto 100%;
-        width: 330px;
-        height: 200px;
-    }
+header:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(i/left.png) 0 0 no-repeat;
+    background-size: auto 100%;
+    width: 330px;
+    height: 200px;
+}
 
-    &:after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 0;
-        background: url(i/right.png) 0 0 no-repeat;
-        background-size: auto 100%;
-        width: 310px;
-        height: 200px;
-    }
+header:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(i/right.png) 0 0 no-repeat;
+    background-size: auto 100%;
+    width: 310px;
+    height: 200px;
 }
 
 .tools {
