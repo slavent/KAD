@@ -8,16 +8,16 @@
     margin: 30px 0 20px 0;
     font-family: Open Sans Condensed, sans-serif;
     font-size: 24px;
+}
 
-    a {
-        color: #2f2e2e;
-        text-decoration: none;
+.posts__title a {
+    color: #2f2e2e;
+    text-decoration: none;
+}
 
-        &:hover {
-            text-decoration: none;
-            cursor: pointer;
-        }
-    }
+.posts__title a:hover {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .posts__category {
@@ -37,15 +37,15 @@
 
 .posts__photo {
     margin: 0 0 20px 0;
+}
 
-    img {
-        width: 100%;
-        transition: all .3s;
+.posts__photo img {
+    width: 100%;
+    transition: all .3s;
+}
 
-        &:hover {
-            opacity: .8;
-        }
-    }
+.posts__photo img:hover {
+    opacity: .8;
 }
 
 .posts__more {

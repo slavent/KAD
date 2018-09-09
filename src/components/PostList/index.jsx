@@ -6,7 +6,7 @@ export default ( { data } ) =>
     <div className="posts">
         { data.map( ( { id, acf: { title, description, image } }, i ) =>
             <div key={ i } className="posts__item box">
-                <div className="posts__category"/>
+                <div className="posts__category">Статьи</div>
                 <div className="posts__title">
                     <Link to={ "/post/" + id }>{ title }</Link>
                 </div>
