@@ -10,45 +10,43 @@ var
     }
 
 var config = {
-    entry: {
-        "kad": path.resolve( __dirname, "src/index" )
-    },
+    entry: path.resolve( __dirname, "src/index" ),
     output: {
-        publicPath: "wp-content/themes/twentysixteen/",
         path: path.resolve( __dirname, "dist" ),
-        filename: "[name].js"
+        filename: "kad.js"
     },
     module: {
-        loaders: [ {
+        rules: [ {
             test: /\.html$/,
-            loader: "file-loader?name=[name].[ext]"
+            use: "file-loader?name=[name].[ext]"
         }, {
             test: /\.jsx|js(\?.+)?$/,
-            exclude: [ /node_modules(?![\/\\]ufs-)/, /bundle.js/ ],
-            loaders: [ /*"es3ify", */ `babel?${JSON.stringify( babelQuery )}` ]
+            exclude: [ /node_modules/ ],
+            use: {
+                loader: "babel-loader",
+                options: {
+                    presets: [ "@babel/preset-env", "@babel/preset-react" ]
+                }
+            }
         }, {
             test: /\.(scss|css)(\?.+)?$/,
-            loader: "style-loader!css-loader!sass-loader?sourceMap"
+            use: [
+                "style-loader",
+                "css-loader",
+                "postcss-loader"
+            ]
         }, {
-            test: /\.(jpe?g|png|gif|svg)$/i,
-            loader: "file-loader?name=images/[hash].[ext]"
-        }, {
-            test: /\.ttf(\?.+)?$/,
-            loader: "file-loader?limit=8192&name=fonts/[hash].[ext]"
-        }, {
-            test: /\.woff(\?.+)?$/,
-            loader: "file-loader?limit=8192&name=fonts/[hash].[ext]"
-        }, {
-            test: /\.eot(\?.+)?$/,
-            loader: "file-loader?limit=8192&name=fonts/[hash].[ext]"
+            test: /\.(png|jpg|gif)$/,
+            use: [
+                {
+                    loader: "file-loader",
+                    options: {}
+                }
+            ]
         } ]
     },
     plugins: [
         new webpack.ProvidePlugin( {
-            $: "jquery",
-            "window.$": "jquery",
-            jQuery: "jquery",
-            "window.jQuery": "jquery",
             _: "underscore",
             React: "react",
             ReactDOM: "react-dom",
@@ -57,14 +55,10 @@ var config = {
         new webpack.DefinePlugin( {
             UI_VERSION: JSON.stringify( pack.version )
         } ),
-        new webpack.EnvironmentPlugin( "NODE_ENV" ),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.EnvironmentPlugin( "NODE_ENV" )
     ],
-    devtool: "source-map",
     resolve: {
-        root: path.resolve( __dirname, "src" ),
-        extensions: [ "", ".js", ".jsx" ],
+        extensions: [ ".js", ".jsx" ],
         alias: {
             components: path.resolve( "./src/components/" ),
             process: path.resolve( "./src/process/" ),
@@ -73,15 +67,8 @@ var config = {
             reducers: path.resolve( "./src/reducers/" ),
             stores: path.resolve( "./src/stores/" ),
             data: path.resolve( "./src/data/" ),
-            node_modules: path.resolve( "./node_modules/" )
-        },
-        fallback: path.join( __dirname, "node_modules" )
-    },
-    resolveLoader: {
-        fallback: path.join( __dirname, "node_modules" )
-    },
-    sassLoader: {
-        outputStyle: "compressed"
+            utils: path.resolve( "./src/utils" )
+        }
     },
     devServer: {
         historyApiFallback: true,
@@ -95,23 +82,6 @@ var config = {
             "Cache-Control": "no-cache"
         }
     }
-}
-
-if ( NODE_ENV !== "development" ) {
-    config.plugins.push( new webpack.optimize.UglifyJsPlugin( {
-        sourceMap: true,
-        beautify: false,
-        comments: false,
-        compress: {
-            warnings: false,
-            sequences: true,
-            booleans: true,
-            loops: true,
-            unused: true,
-            drop_console: true,
-            unsafe: true
-        }
-    } ) )
 }
 
 module.exports = config

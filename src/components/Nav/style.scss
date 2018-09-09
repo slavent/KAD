@@ -2,67 +2,43 @@ nav {
     display: table;
     width: 100%;
     margin: -10px 0 60px 0;
+}
 
-    .mainmenu {
-        text-align: center;
+.mainmenu {
+    text-align: center;
+}
+
+.mainmenu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mainmenu li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    position: relative;
+}
+
+.mainmenu li .active a {
+    background: #fff;
+    color: #2f2e2e;
+}
+
+.mainmenu a {
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 5px 10px;
+    background: #2f2e2e;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: all .3s;
+
+    &:hover {
+        background: #666;
     }
 
-    ul {
-        margin: 0;
-        padding: 0;
-    }
-    
-    li {
-        display: inline-block;
-        margin: 0 10px 0 0;
-        position: relative;
-
-        &.active a {
-            background: #fff;
-            color: #2f2e2e;
-        }
-    }
-
-    a {
-        font-family: 'Open Sans Condensed', sans-serif;
-        padding: 5px 10px;
-        background: #2f2e2e;
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-        letter-spacing: 1px;
-        transition: all .3s;
-
-        &:hover {
-            background: #666;
-        }
-
-        &.no-click:hover {
-            cursor: default;
-        }
-    }
-
-    .submenu {
-        border-top: 3px solid #fff;
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 27px;
-        z-index: 500;
-        min-width: 170px;
-        text-align: left;
-
-        li, a {
-            display: block;
-        }
-
-        a, li.active a {
-            color: #fff !important;
-            background: #2f2e2e !important;
-
-            &:hover {
-                background: #666 !important;
-            }
-        }
+    &.no-click:hover {
+        cursor: default;
     }
 }

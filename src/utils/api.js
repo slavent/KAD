@@ -1,21 +1,9 @@
-/**
- * @author Kozinets Svyatoslav
- */
+const ROOT = "peremenka20.ru"
 
 const API = {
-	GET_POSTS: "http://peremenka20.ru/wp-json/wp/v2/posts?per_page=100&categories=2",
-	GET_POST: "http://peremenka20.ru/wp-json/wp/v2/posts/",
-	GET_ABOUT_ME: "http://peremenka20.ru/wp-json/acf/v2/page/71",
-	GET_PHOTOS: "http://peremenka20.ru/wp-json/wp/v2/posts?per_page=100&categories=3",
-	GET_PORTFOLIO: "http://peremenka20.ru/wp-json/acf/v2/page/57",
-	GET_LINKS: "http://peremenka20.ru/wp-json/acf/v2/page/507",
-	GET_CHILDREN: "http://peremenka20.ru/wp-json/wp/v2/posts?per_page=100&categories=8",
-	GET_POLL: "http://peremenka20.ru/wp-json/acf/v2/page/507",
-	GET_SHEDULER: "http://peremenka20.ru/wp-json/acf/v2/page/642",
-	GET_HOLIDAYS: "http://peremenka20.ru/wp-json/acf/v2/page/636",
-	GET_CONGRATULATIONS: "http://peremenka20.ru/wp-json/wp/v2/posts?per_page=100&categories=10",
-	GET_ADS: "http://peremenka20.ru/wp-json/wp/v2/posts?per_page=100&categories=9",
-	SEARCH: "http://peremenka20.ru/wp-json/wp/v2/posts?categories=2&search="
+    GET_POSTS: "http://" + ROOT + "/wp-json/acf/v3/posts?categories=2",
+    GET_MESSAGES: "http://" + ROOT + "/wp-json/acf/v3/posts?categories=4",
+    GET_GALLERY: "http://" + ROOT + "/wp-json/acf/v3/posts?categories=3"
 }
 
 export default API
