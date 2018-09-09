@@ -3,15 +3,12 @@ const NODE_ENV = process.env.NODE_ENV && process.env.NODE_ENV.trim() || "develop
 var
     webpack = require( "webpack" ),
     path = require( "path" ),
-    pack = require( "./package.json" ),
-    babelQuery = {
-        presets: [ "es2015", "react" ],
-        plugins: [ "transform-proto-to-assign", "transform-es3-property-literals", "transform-es3-member-expression-literals" ]
-    }
+    pack = require( "./package.json" )
 
 var config = {
     entry: path.resolve( __dirname, "src/index" ),
     output: {
+        publicPath: "wp-content/themes/twentyseventeen/",
         path: path.resolve( __dirname, "dist" ),
         filename: "kad.js"
     },

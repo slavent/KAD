@@ -1,3 +1,4 @@
+import React from "react"
 import ControllerRender from "./controllers/ControllerRender"
 import ControllerREST from "./controllers/ControllerREST"
 import Loader from "components/Loader"
@@ -26,7 +27,9 @@ export default class Main extends React.Component {
 
         return (
             <div>
-                <div className="content">{ ControllerRender.renderPostList.call( this ) }</div>
+                <div className="content">
+                    { ControllerRender.renderPostList.call( this ) }
+                </div>
                 <div className="sidebar">
                 </div>
             </div>
