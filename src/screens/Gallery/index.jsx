@@ -1,26 +1,22 @@
-/**
- * @author: Kozinets Svyatoslav
- */
+import React from "react"
 import ControllerREST from "./Controllers/controllerREST"
 import PhotoAlbums from "components/PhotoAlbums"
 import Loader from "components/Loader"
-import Props from "./props"
 
 export default class Gallery extends React.Component {
-    constructor( props ) {
+    constructor ( props ) {
         super( props )
+
         this.state = {
             photos: null
         }
     }
 
-    componentDidMount() {
+    componentDidMount () {
         ControllerREST.getPhotos.call( this )
     }
 
-    render() {
+    render () {
         return this.state.photos ? <PhotoAlbums data={ this.state.photos }/> : <Loader/>
     }
 }
-
-Gallery.defaultProps = Props

@@ -1,25 +1,19 @@
-/**
- * @author: Kozinets Svyatoslav
- */
+import React from "react"
+import { Link } from "react-router"
 import "./style.scss"
-import {
-    Link
-} from "react-router"
 
-export default class PhotoAlbums extends React.Component {
-    render() {
-        return (
-            <div className="albums">
-                { this.props.data.map( ( item, i ) => {
-                    return (
-                        <div key={ i } className="albums__item">
-                            <img src={ item.cover } className="albums_photo"/>
-                            <div className="albums__title">{ item.title }</div>
-                            <Link to={{ pathname: "/gallery/item", query: { id: item.id } }} className="albums__link"></Link>
-                        </div>
-                    )
-                } ) }
-            </div>
-        )
-    }
-}
+export default ( { data } ) =>
+    <div className="albums">
+        { data.map( ( { id, acf: { title, image } }, i ) => {
+            return (
+                <div key={ i } className="albums__item">
+                    <img src={ image } className="albums_photo"/>
+                    <div className="albums__title">{ title }</div>
+                    <Link to={ {
+                        pathname: "/gallery/item",
+                        query: { id }
+                    } } className="albums__link"/>
+                </div>
+            )
+        } ) }
+    </div>
