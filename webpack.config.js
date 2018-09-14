@@ -1,11 +1,10 @@
 // const NODE_ENV = process.env.NODE_ENV && process.env.NODE_ENV.trim() || "development"
 
-var
-    webpack = require( "webpack" ),
-    path = require( "path" ),
-    pack = require( "./package.json" )
+const webpack = require( "webpack" )
+const path = require( "path" )
+const pack = require( "./package.json" )
 
-var config = {
+const config = {
     entry: path.resolve( __dirname, "src/index" ),
     output: {
         publicPath: "wp-content/themes/twentyseventeen/",
