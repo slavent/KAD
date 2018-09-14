@@ -1,39 +1,31 @@
 {
-  "name": "kad",
-  "version": "0.0.1",
-  "scripts": {
-    "init": "npm i webpack webpack-dev-server -g --ignore-scripts --verbose && npm i --ignore-scripts --verbose",
-    "dev": "set NODE_ENV=development && cp index.html dist/ && cp src/ring.mp3 dist/ && cp favicon.ico dist/ && webpack-dev-server --host 0.0.0.0 --port 8080",
-    "prod": "set NODE_ENV=production && webpack",
-    "test": "mocha tests --require ignore-styles --compilers js:babel-register",
-    "prepublish": "eslint src/ && npm run prod"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "axios": "^0.14.0",
-    "babel-loader": "^8.0.2",
-    "css-loader": "0.23.0",
-    "eslint": "^2.10.2",
-    "eslint-plugin-react": "^5.1.1",
-    "file-loader": "^2.0.0",
-    "ignore-styles": "^5.0.1",
-    "image-webpack-loader": "1.6.3",
-    "node-sass": "3.4.2",
-    "postcss-loader": "^3.0.0",
-    "react-addons-test-utils": "^15.3.2",
-    "react-router": "^2.8.1",
-    "sass-loader": "3.1.2",
-    "skin-deep": "^0.16.0",
-    "style-loader": "0.13.0",
-    "underscore": "latest",
-    "webpack": "latest",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "latest"
-  },
-  "dependencies": {
-    "react": "0.14.7",
-    "react-dom": "0.14.5"
-  }
+    "name": "KAD",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "set NODE_ENV=development && cp index.html dist/ && cp src/ring.mp3 dist/ && cp favicon.ico dist/ && webpack-dev-server --host 0.0.0.0 --port 8080",
+        "prod": "set NODE_ENV=production && webpack",
+        "test": "mocha tests --require ignore-styles --compilers js:babel-register"
+    },
+    "devDependencies": {
+        "@babel/core": "7.0.0",
+        "@babel/preset-env": "7.0.0",
+        "@babel/preset-react": "7.0.0",
+        "axios": "0.14.0",
+        "babel-loader": "8.0.2",
+        "css-loader": "0.23.0",
+        "eslint": "2.10.2",
+        "eslint-plugin-react": "5.1.1",
+        "file-loader": "2.0.0",
+        "postcss-loader": "3.0.0",
+        "react-router": "2.8.1",
+        "style-loader": "0.13.0",
+        "underscore": "latest",
+        "webpack": "latest",
+        "webpack-cli": "3.1.0",
+        "webpack-dev-server": "latest"
+    },
+    "dependencies": {
+        "react": "0.14.7",
+        "react-dom": "0.14.5"
+    }
 }
