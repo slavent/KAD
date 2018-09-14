@@ -1,4 +1,4 @@
-#KAD
+#Peremenka20
 
-* npm run init
-* npm run dev
+* ```npm run dev``` - development build 
+* ```npm run prod``` - production build

@@ -1,5 +1,5 @@
 {
-    "name": "KAD",
+    "name": "peremenka20",
     "version": "1.0.0",
     "scripts": {
         "dev": "set NODE_ENV=development && cp index.html dist/ && cp src/ring.mp3 dist/ && cp favicon.ico dist/ && webpack-dev-server --host 0.0.0.0 --port 8080",
@@ -13,8 +13,8 @@
         "axios": "0.14.0",
         "babel-loader": "8.0.2",
         "css-loader": "0.23.0",
-        "eslint": "2.10.2",
-        "eslint-plugin-react": "5.1.1",
+        "eslint": "latest",
+        "eslint-plugin-react": "latest",
         "file-loader": "2.0.0",
         "postcss-loader": "3.0.0",
         "react-router": "2.8.1",

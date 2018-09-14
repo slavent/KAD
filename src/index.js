@@ -1,9 +1,5 @@
-import {
-    Router,
-    Route,
-    IndexRoute,
-    browserHistory
-} from "react-router"
+import ReactDOM from "react-dom"
+import { Router, Route, IndexRoute, browserHistory } from "react-router"
 import Layout from "components/Layout"
 import Main from "screens/Main"
 // import Gallery from "screens/Gallery"

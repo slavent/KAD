@@ -1,4 +1,4 @@
-const NODE_ENV = process.env.NODE_ENV && process.env.NODE_ENV.trim() || "development"
+// const NODE_ENV = process.env.NODE_ENV && process.env.NODE_ENV.trim() || "development"
 
 var
     webpack = require( "webpack" ),
