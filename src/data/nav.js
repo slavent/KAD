@@ -1,7 +1,3 @@
-/**
- * @author Kozinets Svyatoslav
- */
-
 let data = [
     {
         url: "/",
