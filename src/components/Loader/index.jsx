@@ -1,10 +1,4 @@
-/**
- * @author: Kozinets Svyatoslav
- */
+import React from "react"
 import "./style.scss"
 
-export default class Loader extends React.Component {
-    render() {
-        return <div className="loader"></div>
-    }
-}
+export default () => <div className="loader"/>
