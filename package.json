@@ -2,9 +2,9 @@
     "name": "peremenka20",
     "version": "1.0.0",
     "scripts": {
-        "dev": "set NODE_ENV=development && cp index.html dist/ && cp src/ring.mp3 dist/ && cp favicon.ico dist/ && webpack-dev-server --host 0.0.0.0 --port 8080",
-        "prod": "set NODE_ENV=production && cp index.html dist/ && cp src/ring.mp3 dist/ && cp favicon.ico dist/ && webpack",
-        "test": "mocha tests --require ignore-styles --compilers js:babel-register"
+        "dev": "set NODE_ENV=development && webpack-dev-server --host 0.0.0.0 --port 8080 && npm run assets",
+        "prod": "set NODE_ENV=production && webpack && npm run assets",
+        "assets": "cp index.html dist/ && cp src/ring.mp3 dist/ && cp favicon.ico dist/"
     },
     "devDependencies": {
         "@babel/core": "7.0.0",
