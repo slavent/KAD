@@ -1,20 +1,17 @@
-.map {
+.map li {
+    margin: 0 0 10px 0;
+}
 
-    li {
-        margin: 0 0 10px 0;
+.map a {
+    color: #212121;
+    transition: all .3s;
+}
 
-        a {
-            color: #212121;
-            transition: all .3s;
+.map a:hover {
+    color: #bf3400;
+    text-decoration: none;
+}
 
-            &:hover {
-                color: #bf3400;
-                text-decoration: none;
-            }
-        }
-    }
-
-    ul {
-        margin: 10px 0;
-    }
+.map ul {
+    margin: 10px 0;
 }
