@@ -1,8 +1,5 @@
 import React from "react"
-import { Link } from
-
-z
-"react-router"
+import { Link } from "react-router"
 import data from "components/Nav/data"
 import "./style.scss"
 
