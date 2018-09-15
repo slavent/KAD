@@ -1,22 +1,20 @@
-/**
- * @author: Kozinets Svyatoslav
- */
+import React from "react"
 import "./style.scss"
 import ControllerUI from "./Controllers/controllerUI"
 
 export default class PhotoAlbum extends React.Component {
-    constructor( props ) {
+    constructor ( props ) {
         super( props )
         this.state = {
             data: props.data
         }
     }
 
-    componentDidMount() {
+    componentDidMount () {
         ControllerUI.createGalleryPopups.call( this )
     }
 
-    render() {
+    render () {
         return (
             <div className="album">
                 { this.state.data.map( ( item, i ) => {
