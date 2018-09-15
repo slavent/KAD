@@ -50,6 +50,7 @@ const config = {
             utils: path.resolve( "./src/utils/" )
         }
     },
+    devtool: "source-map",
     devServer: {
         historyApiFallback: true,
         inline: true,
