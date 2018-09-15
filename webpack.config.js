@@ -1,8 +1,6 @@
 // const NODE_ENV = process.env.NODE_ENV && process.env.NODE_ENV.trim() || "development"
 
-const webpack = require( "webpack" )
 const path = require( "path" )
-const pack = require( "./package.json" )
 
 const config = {
     entry: path.resolve( __dirname, "src/index" ),
@@ -42,16 +40,6 @@ const config = {
         } ]
     },
     plugins: [
-        new webpack.ProvidePlugin( {
-            _: "underscore",
-            React: "react",
-            ReactDOM: "react-dom",
-            axios: "axios"
-        } ),
-        new webpack.DefinePlugin( {
-            UI_VERSION: JSON.stringify( pack.version )
-        } ),
-        new webpack.EnvironmentPlugin( "NODE_ENV" )
     ],
     resolve: {
         extensions: [ ".js", ".jsx" ],
@@ -59,11 +47,7 @@ const config = {
             components: path.resolve( "./src/components/" ),
             process: path.resolve( "./src/process/" ),
             screens: path.resolve( "./src/screens/" ),
-            actions: path.resolve( "./src/actions/" ),
-            reducers: path.resolve( "./src/reducers/" ),
-            stores: path.resolve( "./src/stores/" ),
-            data: path.resolve( "./src/data/" ),
-            utils: path.resolve( "./src/utils" )
+            utils: path.resolve( "./src/utils/" )
         }
     },
     devServer: {

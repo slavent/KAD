@@ -1,6 +1,10 @@
+import React from "react"
+import { Link } from
+
+z
+"react-router"
+import data from "components/Nav/data"
 import "./style.scss"
-import { Link } from "react-router"
-import data from "data/nav"
 
 export default class SiteMap extends React.Component {
     render () {

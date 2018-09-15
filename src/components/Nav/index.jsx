@@ -1,6 +1,6 @@
 import "./style.scss"
 import { Link } from "react-router"
-import NavMap from "data/nav"
+import NavMap from "./data"
 
 export default class Nav extends React.Component {
     constructor ( props ) {

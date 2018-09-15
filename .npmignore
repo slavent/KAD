@@ -1,6 +1,0 @@
-/node_modules/
-/src/
-/tasks/
-.babelrc
-index.html
-webpack.config.js
