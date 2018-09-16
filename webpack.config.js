@@ -1,4 +1,6 @@
-// const NODE_ENV = process.env.NODE_ENV && process.env.NODE_ENV.trim() || "development"
+const NODE_ENV = process.env.NODE_ENV && process.env.NODE_ENV.trim() || "development"
+const webpack = require( "webpack" )
+const CopyWebpackPlugin = require( "copy-webpack-plugin" )
 
 const path = require( "path" )
 
@@ -40,6 +42,20 @@ const config = {
         } ]
     },
     plugins: [
+        new CopyWebpackPlugin( [
+            {
+                from: "./index.html",
+                to: "./"
+            },
+            {
+                from: "./favicon.ico",
+                to: "./"
+            },
+            {
+                from: "./src/ring.mp3",
+                to: "./"
+            }
+        ] )
     ],
     resolve: {
         extensions: [ ".js", ".jsx" ],
@@ -50,7 +66,6 @@ const config = {
             utils: path.resolve( "./src/utils/" )
         }
     },
-    devtool: "source-map",
     devServer: {
         historyApiFallback: true,
         inline: true,
@@ -63,6 +78,17 @@ const config = {
             "Cache-Control": "no-cache"
         }
     }
+}
+
+if ( NODE_ENV === "development" ) {
+    config.devtool = "eval"
+} else if ( NODE_ENV === "production" ) {
+    config.devtool = "source-map"
+    config.plugins.push(
+        new webpack.DefinePlugin( {
+            NODE_ENV: JSON.stringify( "production" )
+        } )
+    )
 }
 
 module.exports = config

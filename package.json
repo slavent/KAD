@@ -1,31 +1,31 @@
 {
-  "name": "peremenka20",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "set NODE_ENV=development && webpack-dev-server --host 0.0.0.0 --port 8080 && npm run assets",
-    "prod": "set NODE_ENV=production && webpack && npm run assets",
-    "assets": "cp index.html dist/ && cp src/ring.mp3 dist/ && cp favicon.ico dist/"
-  },
-  "devDependencies": {
-    "@babel/core": "7.0.0",
-    "@babel/preset-env": "7.0.0",
-    "@babel/preset-react": "7.0.0",
-    "axios": "0.14.0",
-    "babel-loader": "8.0.2",
-    "css-loader": "0.23.0",
-    "eslint": "latest",
-    "eslint-plugin-react": "latest",
-    "file-loader": "2.0.0",
-    "postcss-loader": "3.0.0",
-    "react-router": "^3.2.1",
-    "style-loader": "0.13.0",
-    "underscore": "latest",
-    "webpack": "latest",
-    "webpack-cli": "3.1.0",
-    "webpack-dev-server": "latest"
-  },
-  "dependencies": {
-    "react": "0.14.7",
-    "react-dom": "0.14.5"
-  }
+    "name": "peremenka20",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "set NODE_ENV=development && webpack-dev-server --host 0.0.0.0 --port 8080",
+        "prod": "set NODE_ENV=production && webpack"
+    },
+    "devDependencies": {
+        "@babel/core": "7.0.0",
+        "@babel/preset-env": "7.0.0",
+        "@babel/preset-react": "7.0.0",
+        "axios": "0.14.0",
+        "babel-loader": "8.0.2",
+        "copy-webpack-plugin": "4.5.2",
+        "css-loader": "0.23.0",
+        "eslint": "latest",
+        "eslint-plugin-react": "latest",
+        "file-loader": "2.0.0",
+        "postcss-loader": "3.0.0",
+        "react-router": "3.2.1",
+        "style-loader": "0.13.0",
+        "underscore": "latest",
+        "webpack": "latest",
+        "webpack-cli": "3.1.0",
+        "webpack-dev-server": "latest"
+    },
+    "dependencies": {
+        "react": "0.14.7",
+        "react-dom": "0.14.5"
+    }
 }

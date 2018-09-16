@@ -4,8 +4,8 @@ import { Link } from "react-router"
 
 export default ( { data } ) =>
     <div className="posts">
-        { data.map( ( { id, acf: { title, preview, image } }, i ) =>
-            <div key={ i } className="posts__item box">
+        { data.map( ( { id, acf: { title, preview, image } }, index ) =>
+            <div key={ index } className="posts__item box">
                 <div className="posts__category">Статьи</div>
                 <div className="posts__title">
                     <Link to={ "/post/" + id }>{ title }</Link>
