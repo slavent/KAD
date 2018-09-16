@@ -4,7 +4,7 @@ import "./style.scss"
 
 export default ( { data } ) =>
     <div className="albums">
-        { data.map( ( { id, acf: { title, image } }, i ) => {
+        { data.map( ( { id, acf: { title = "Фото", image } }, i ) => {
             return (
                 <div key={ i } className="albums__item">
                     <img src={ image } className="albums_photo"/>

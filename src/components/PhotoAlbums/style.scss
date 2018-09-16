@@ -3,7 +3,7 @@
     font-size: 18px;
 }
 
-.albums__item {
+.albums .albums__item {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -13,23 +13,29 @@
     transition: all .3s;
 }
 
-.albums__item:hover {
+.albums .albums__item:hover {
     opacity: .8;
     cursor: pointer;
 }
 
-.albums__title {
+.albums .albums__title {
     margin: 10px 0 0;
     text-align: center;
     line-height: 1.5;
     padding: 0 10px 10px 10px;
 }
 
-.albums__link {
+.albums .albums__link {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 10;
+}
+
+.albums .albums_photo {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
 }
