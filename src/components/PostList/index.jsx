@@ -4,7 +4,7 @@ import { Link } from "react-router"
 
 export default ( { data } ) =>
     <div className="posts">
-        { data.map( ( { id, acf: { title, description, image } }, i ) =>
+        { data.map( ( { id, acf: { title, preview, image } }, i ) =>
             <div key={ i } className="posts__item box">
                 <div className="posts__category">Статьи</div>
                 <div className="posts__title">
@@ -12,7 +12,7 @@ export default ( { data } ) =>
                 </div>
                 <div
                     className="posts__desc"
-                    dangerouslySetInnerHTML={ { __html: description } }>
+                    dangerouslySetInnerHTML={ { __html: preview } }>
                 </div>
                 <div className="posts__photo">
                     <Link to={ "/post/" + id }>
