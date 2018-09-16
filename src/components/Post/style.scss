@@ -1,79 +1,76 @@
-.post {
+.post__photo {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    width: 1024px;
+    height: 300px;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
 
-    &__photo {
-        text-align: center;
-        vertical-align: middle;
-        display: table-cell;
-        width: 1024px;
-        height: 300px;
-        -webkit-background-size: 100% auto;
-        background-size: 100% auto;
-    }
+.post__title {
+    font-size: 34px;
+    color: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0 20%;
+    background: rgba(47, 46, 46, 0.65);
+    padding: 15px;
+}
 
-    &__title {
-        font-size: 34px;
-        color: #fff;
-        font-family: 'Open Sans Condensed', sans-serif;
-        margin: 0 20%;
-        background: rgba(47, 46, 46, 0.65);
-        padding: 15px;
-    }
+.post__desc {
+    margin: 20px 0 0;
+    line-height: 1.5;
+}
 
-    &__desc {
-        margin: 20px 0 0;
-        line-height: 1.5;
-    }
+.post__download {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    background: url("./i/download.png") 0 0 no-repeat;
+    cursor: pointer;
+    position: relative;
+    margin: 0 20px 0 0;
+}
 
-    &__download {
-        width: 64px;
-        height: 64px;
-        display: inline-block;
-        background: url("./i/download.png") 0 0 no-repeat;
-        cursor: pointer;
-        position: relative;
-        margin: 0 20px 0 0;
+.post__download:hover:after {
+    display: block;
+}
 
-        &:hover:after {
-            display: block;
-        }
+.post__download:after {
+    display: none;
+    content: "скачать";
+    position: absolute;
+    top: 0;
+    left: 65px;
+    background: #fff;
+    color: #2e2e2e;
+    padding: 3px 5px;
+    border-radius: 2px;
+    z-index: 100;
+}
 
-        &:after {
-            display: none;
-            content: "скачать";
-            position: absolute;
-            top: 0;
-            left: 65px;
-            background: #fff;
-            color: #2e2e2e;
-            padding: 3px 5px;
-            border-radius: 2px;
-            z-index: 100;
-        }
-    }
+.post__print {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    background: url("./i/printer.png") 0 0 no-repeat;
+    cursor: pointer;
+    position: relative;
+}
 
-    &__print {
-        width: 64px;
-        height: 64px;
-        display: inline-block;
-        background: url("./i/printer.png") 0 0 no-repeat;
-        cursor: pointer;
-        position: relative;
+.post__print:hover:after {
+    display: block;
+}
 
-        &:hover:after {
-            display: block;
-        }
-
-        &:after {
-            display: none;
-            content: "печатать";
-            position: absolute;
-            top: 0;
-            left: 65px;
-            background: #fff;
-            color: #2e2e2e;
-            padding: 3px 5px;
-            border-radius: 2px;
-            z-index: 100;
-        }
-    }
+.post__print:after {
+    display: none;
+    content: "печатать";
+    position: absolute;
+    top: 0;
+    left: 65px;
+    background: #fff;
+    color: #2e2e2e;
+    padding: 3px 5px;
+    border-radius: 2px;
+    z-index: 100;
 }
