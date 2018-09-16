@@ -1,7 +1,7 @@
 import React from "react"
 import "./style.scss"
 
-export default ( { data: { image, title, category, description, post_file } } ) =>
+export default ( { data: { image, title, category = "Статьи", description, post_file } } ) =>
     <div className="post">
         <div className="post__photo" style={ { background: "url(" + image + ")" } }>
             <div className="post__title">{ category }: { title }</div>
