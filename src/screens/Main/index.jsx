@@ -2,6 +2,7 @@ import React from "react"
 import ControllerRender from "./controllers/ControllerRender"
 import ControllerREST from "./controllers/ControllerREST"
 import Loader from "components/Loader"
+import AboutMe from "components/AboutMe"
 
 export default class Main extends React.Component {
     constructor ( props ) {
@@ -14,12 +15,11 @@ export default class Main extends React.Component {
 
     componentDidMount () {
         ControllerREST.getPosts.call( this )
-        // ControllerREST.getMessages.call( this )
-        // ControllerREST.getGallery.call( this )
+        ControllerREST.getAboutMe.call( this )
     }
 
     render () {
-        const { posts } = this.state
+        const { posts, about } = this.state
 
         if ( !posts ) {
             return <Loader/>
@@ -31,6 +31,7 @@ export default class Main extends React.Component {
                     { ControllerRender.renderPostList.call( this ) }
                 </div>
                 <div className="sidebar">
+                    <AboutMe photo={ about.acf.image }/>
                 </div>
             </div>
         )

@@ -11,6 +11,15 @@ export default class ControllerREST {
             .catch( e => console.error( e ) )
     }
 
+    static getAboutMe () {
+        axios
+            .get( API.GET_ABOUT_ME )
+            .then( r => this.setState( {
+                about: r.data
+            } ) )
+            .catch( e => console.error( e ) )
+    }
+
     static getMessages () {
         axios
             .get( API.GET_POSTS )
