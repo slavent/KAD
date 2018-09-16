@@ -1,4 +1,4 @@
-.post__photo {
+.post .post__photo {
     text-align: center;
     vertical-align: middle;
     display: table-cell;
@@ -8,7 +8,7 @@
     background-size: 100% auto;
 }
 
-.post__title {
+.post .post__title {
     font-size: 34px;
     color: #fff;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -17,12 +17,12 @@
     padding: 15px;
 }
 
-.post__desc {
+.post .post__desc {
     margin: 20px 0 0;
     line-height: 1.5;
 }
 
-.post__download {
+.post .post__download {
     width: 64px;
     height: 64px;
     display: inline-block;
@@ -32,11 +32,11 @@
     margin: 0 20px 0 0;
 }
 
-.post__download:hover:after {
+.post .post__download:hover:after {
     display: block;
 }
 
-.post__download:after {
+.post .post__download:after {
     display: none;
     content: "скачать";
     position: absolute;
@@ -49,7 +49,7 @@
     z-index: 100;
 }
 
-.post__print {
+.post .post__print {
     width: 64px;
     height: 64px;
     display: inline-block;
@@ -58,11 +58,11 @@
     position: relative;
 }
 
-.post__print:hover:after {
+.post .post__print:hover:after {
     display: block;
 }
 
-.post__print:after {
+.post .post__print:after {
     display: none;
     content: "печатать";
     position: absolute;
