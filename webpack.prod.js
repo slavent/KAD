@@ -4,9 +4,6 @@ const common = require('./webpack.common');
 
 module.exports = merge(common, {
     mode: "production",
-    output: {
-        publicPath: "/wp-content/themes/twentyseventeen/"
-    },
     // plugins: [
     //     new BundleAnalyzerPlugin()
     // ]
