@@ -13,30 +13,11 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-image: url(i/background-left.png), url(i/background-right.png);
+    background-position-y: 210px;
+    background-position-x: left, right;
+    background-repeat: repeat-y;
 }
-
-
-//.main-wrp:before {
-//    content: "";
-//    position: absolute;
-//    top: 222px;
-//    left: 0;
-//    bottom: 0;
-//    background: url(i/background-leftt.png) 0 0 repeat-y;
-//    width: 175px;
-//    height: 100%;
-//}
-//
-//.main-wrp:after {
-//    content: "";
-//    position: absolute;
-//    top: 222px;
-//    right: 0;
-//    bottom: 0;
-//    background: url(i/background-right.png) 0 0 repeat-y;
-//    width: 175px;
-//    height: 100%;
-//}
 
 header {
     height: 210px;
