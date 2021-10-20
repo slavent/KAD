@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Layout from "./components/Layout/Layout";
-import Main from "./screens/Main";
+import Main from "./containers/Main";
 import Post from "./components/Post/Post";
-import About from "./screens/About/About";
-import Gallery from "./screens/Gallery/Gallery";
-import SiteMap from "./screens/SiteMap/SiteMap";
-import Scheduler from "./screens/Shceduler/Shceduler";
-import Projects from "./screens/Projects/Projects";
+import About from "./containers/About/About";
+import Gallery from "./containers/Gallery/Gallery";
+import SiteMap from "./containers/SiteMap/SiteMap";
+import Scheduler from "./containers/Shceduler/Shceduler";
+import Projects from "./containers/Projects/Projects";
 
 ReactDOM.render(
     <Router>
