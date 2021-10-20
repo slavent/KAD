@@ -41,7 +41,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Custom template',
+            title: "Личный сайт Учителя",
             template: "./src/index.html"
         })
     ]
