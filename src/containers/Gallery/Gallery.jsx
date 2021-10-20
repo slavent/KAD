@@ -13,7 +13,8 @@ const Gallery = () => {
     useEffect(() => {
         const getPhotos = async () => {
             const result = await fetch(API.GET_GALLERY)
-            const formatted = result.data.map(item => item.acf.image)
+            const response = await result.json()
+            const formatted = response.map(item => item.acf.image)
 
             setPhotos(formatted)
         }

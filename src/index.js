@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Layout from "./components/Layout/Layout";
-import Main from "./containers/Main";
+import Main from "./containers/Main/Main";
 import Post from "./components/Post/Post";
 import About from "./containers/About/About";
 import Gallery from "./containers/Gallery/Gallery";

@@ -11,14 +11,16 @@ const Main = () => {
     useEffect(() => {
         const getPosts = async () => {
             const result = await fetch(API.GET_POSTS)
+            const response = await result.json()
 
-            setPosts(result.data)
+            setPosts(response)
         }
 
         const getAbout = async () => {
             const result = await fetch(API.GET_ABOUT_ME)
+            const response = await result.json()
 
-            setAboutPic(result.data)
+            setAboutPic(response.acf.image)
         }
 
         getPosts()

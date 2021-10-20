@@ -12,8 +12,9 @@ const Post = () => {
     useEffect(() => {
         const getPosts = async () => {
             const result = await fetch(API.GET_POST + id)
+            const response = await result.json()
 
-            setPost(result.data.acf)
+            setPost(response.acf)
         }
 
         getPosts()
