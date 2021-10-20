@@ -1,6 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
-import data from "../../components/Nav/data"
+import data from "../../contants/nav"
 import "./style.scss"
 
 const SiteMap = () =>

@@ -6,8 +6,9 @@ import Main from "./screens/Main";
 import Post from "./components/Post/Post";
 import About from "./screens/About/About";
 import Gallery from "./screens/Gallery/Gallery";
-import SiteMap from "./screens/SiteMap";
+import SiteMap from "./screens/SiteMap/SiteMap";
 import Scheduler from "./screens/Shceduler/Shceduler";
+import Projects from "./screens/Projects/Projects";
 
 ReactDOM.render(
     <Router>
@@ -18,6 +19,9 @@ ReactDOM.render(
                 </Route>
                 <Route path="/posts/:id">
                     <Post/>
+                </Route>
+                <Route path="/projects">
+                    <Projects/>
                 </Route>
                 <Route path="/about">
                     <About/>

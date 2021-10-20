@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import data from "./data"
+import data from "../../contants/nav"
 import "./style.scss"
 
 const Nav = () =>
@@ -9,9 +9,7 @@ const Nav = () =>
             <ul className="main-menu">
                 { data && data.map( ( item, i ) => {
                     return (
-                        <li
-                            key={ i }
-                            className={ item.active ? "active" : "" }>
+                        <li key={ i }>
                             <Link to={ item.url }>
                                 { item.title }
                             </Link>
