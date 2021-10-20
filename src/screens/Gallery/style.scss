@@ -1,0 +1,17 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: 25%;
+    padding: 0 20px 20px 0;
+
+    &:nth-child(4) {
+      padding-right: 0;
+    }
+
+    img {
+      border-radius: 5px;
+    }
+  }
+}

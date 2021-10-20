@@ -2,7 +2,7 @@
  * @author: Kozinets Svyatoslav
  */
 import ControllerREST from "./Controllers/controllerREST"
-import PostList from "components/PostList"
+import PostList from "components/Posts"
 import Loader from "components/Loader"
 
 export default class Congratulations extends React.Component {

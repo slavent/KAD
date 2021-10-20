@@ -58,6 +58,16 @@ let data = [
     //     active: false
     // },
     {
+        url: "/scheduler",
+        title: "Расписание",
+        active: false
+    },
+    {
+        url: "/about",
+        title: "Об учителе",
+        active: false
+    },
+    {
         url: "/sitemap",
         title: "Карта сайта",
         active: false

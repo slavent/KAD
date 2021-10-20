@@ -1,0 +1,28 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid #999;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__col {
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    flex-basis: 14.3%;
+    min-height: 50px;
+    text-align: center;
+    padding: 5px;
+
+    .table-dinner & {
+      flex-basis: 33.33%;
+    }
+
+    &:first-child {
+      border-left: 1px solid #999;
+    }
+  }
+}

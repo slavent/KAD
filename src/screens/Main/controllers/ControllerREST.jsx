@@ -1,5 +1,5 @@
 import axios from "axios"
-import API from "utils/api"
+import API from "../../../contants/api";
 
 export default class ControllerREST {
     static getPosts () {
