@@ -22,6 +22,11 @@ const Gallery = () => {
         getPhotos()
     }, [])
 
+    const onPreviewClick = index => {
+        togglePopup(true)
+        setPhotoIndex(index)
+    }
+
     if (!photos.length) {
         return <Loader/>
     }
@@ -33,7 +38,7 @@ const Gallery = () => {
                     <div
                         key={key}
                         className="gallery__item"
-                        onClick={() => togglePopup(true)}>
+                        onClick={() => onPreviewClick(key)}>
                         <figure>
                             <img src={src}/>
                         </figure>
