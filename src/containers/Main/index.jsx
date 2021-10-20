@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react"
 import AboutMe from "../../components/AboutMe/AboutMe";
 import Loader from "../../components/Loader/Loader";
 import Posts from "../../components/Posts/Posts";
-import axios from "axios";
 import API from "../../contants/api";
 
 const Main = () => {
@@ -10,15 +9,20 @@ const Main = () => {
     const [aboutPic, setAboutPic] = useState("")
 
     useEffect(() => {
-        axios
-            .get(API.GET_POSTS)
-            .then(r => setPosts(r.data))
-            .catch(e => console.error(e))
+        const getPosts = async () => {
+            const result = await fetch(API.GET_POSTS)
 
-        axios
-            .get(API.GET_ABOUT_ME)
-            .then(r => setAboutPic(r.data))
-            .catch(e => console.error(e))
+            setPosts(result.data)
+        }
+
+        const getAbout = async () => {
+            const result = await fetch(API.GET_ABOUT_ME)
+
+            setAboutPic(result.data)
+        }
+
+        getPosts()
+        getAbout()
     }, [])
 
     if (!posts || !posts.length) {

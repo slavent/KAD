@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react"
 import {useParams} from "react-router-dom"
-import axios from "axios";
 import API from "../../contants/api";
 import Loader from "../Loader/Loader";
 import "./style.scss"
@@ -11,9 +10,13 @@ const Post = () => {
     const [post, setPost] = useState()
 
     useEffect(() => {
-        axios.get(API.GET_POST + id)
-            .then(r => setPost(r.data.acf))
-            .catch(e => console.error(e))
+        const getPosts = async () => {
+            const result = await fetch(API.GET_POST + id)
+
+            setPost(result.data.acf)
+        }
+
+        getPosts()
     }, [])
 
 

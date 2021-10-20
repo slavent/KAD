@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react"
 import Loader from "../../components/Loader/Loader";
-import axios from "axios";
 import API from "../../contants/api";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
@@ -12,13 +11,14 @@ const Gallery = () => {
     const [isShowPopup, togglePopup] = useState(false)
 
     useEffect(() => {
-        axios.get(API.GET_GALLERY)
-            .then(r => {
-                const formatted = r.data.map(item => item.acf.image)
+        const getPhotos = async () => {
+            const result = await fetch(API.GET_GALLERY)
+            const formatted = result.data.map(item => item.acf.image)
 
-                setPhotos(formatted)
-            })
-            .catch(e => console.error(e))
+            setPhotos(formatted)
+        }
+
+        getPhotos()
     }, [])
 
     if (!photos.length) {
