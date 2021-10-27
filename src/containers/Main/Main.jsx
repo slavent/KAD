@@ -6,7 +6,7 @@ import API from "../../contants/api";
 
 const Main = () => {
     const [posts, setPosts] = useState([])
-    const [aboutPic, setAboutPic] = useState("")
+    const [about, setAbout] = useState({})
 
     useEffect(() => {
         const getPosts = async () => {
@@ -20,7 +20,7 @@ const Main = () => {
             const result = await fetch(API.GET_ABOUT_ME)
             const response = await result.json()
 
-            setAboutPic(response.acf.image)
+            setAbout(response)
         }
 
         getPosts()
@@ -37,7 +37,10 @@ const Main = () => {
                 <Posts data={posts}/>
             </div>
             <div className="sidebar">
-                <AboutMe photo={aboutPic}/>
+                {
+                    about.content &&
+                    <AboutMe content={about.content}/>
+                }
             </div>
         </div>
     )

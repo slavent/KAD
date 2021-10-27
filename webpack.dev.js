@@ -8,8 +8,14 @@ module.exports = merge(common, {
         static: {
             directory: path.join(__dirname, 'dist'),
         },
+        proxy: {
+            "/api": {
+                target: "http://localhost:3333",
+                pathRewrite: { '^/api': '' }
+            }
+        },
         historyApiFallback: true,
         compress: true,
-        port: 9000,
+        port: 9000
     }
-})
+} )

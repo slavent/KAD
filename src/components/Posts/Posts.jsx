@@ -5,7 +5,7 @@ import "./style.scss"
 
 const Posts = ( { data } ) =>
     <div className="posts">
-        { data.map( ( { id, acf: { title, preview, image } }, index ) =>
+        { data.map( ( { id, title, description, picture }, index ) =>
             <Box key={ index }>
                 <div className="posts__item">
                     <div className="posts__title">
@@ -13,12 +13,12 @@ const Posts = ( { data } ) =>
                     </div>
                     <div className="posts__photo">
                         <Link to={ "/posts/" + id }>
-                            <img src={ image }/>
+                            <img src={ picture }/>
                         </Link>
                     </div>
                     <div
                         className="posts__desc"
-                        dangerouslySetInnerHTML={ { __html: preview } }>
+                        dangerouslySetInnerHTML={ { __html: description } }>
                     </div>
                     <div className="posts__more">
                         <Link to={ "/posts/" + id }>читать дальше</Link>
