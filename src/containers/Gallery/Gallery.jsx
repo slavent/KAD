@@ -33,13 +33,13 @@ const Gallery = () => {
     return (
         <div className="gallery">
             {
-                photos.map((src, key) =>
+                photos.map((item, key) =>
                     <div
                         key={key}
                         className="gallery__item"
                         onClick={() => onPreviewClick(key)}>
                         <figure>
-                            <img src={`/files/${src}`}/>
+                            <img src={`/files/${item.picture}`}/>
                         </figure>
                     </div>
                 )
@@ -47,9 +47,9 @@ const Gallery = () => {
             {
                 isShowPopup &&
                 <Lightbox
-                    mainSrc={`/files/${photos[photoIndex]}`}
-                    nextSrc={`/files/${photos[(photoIndex + 1) % photos.length]}`}
-                    prevSrc={`/files/${photos[(photoIndex + photos.length - 1) % photos.length]}`}
+                    mainSrc={`/files/${photos[photoIndex].picture}`}
+                    nextSrc={`/files/${photos[(photoIndex + 1) % photos.length].picture}`}
+                    prevSrc={`/files/${photos[(photoIndex + photos.length - 1) % photos.length].picture}`}
                     onCloseRequest={() => togglePopup(false)}
                     onMovePrevRequest={() => setPhotoIndex((photoIndex + photos.length - 1) % photos.length)}
                     onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % photos.length)}/>
