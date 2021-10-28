@@ -6,7 +6,7 @@ import API from "../../contants/api";
 
 const Main = () => {
     const [posts, setPosts] = useState([])
-    const [about, setAbout] = useState({})
+    const [about, setAbout] = useState(null)
 
     useEffect(() => {
         const getPosts = async () => {
@@ -37,10 +37,7 @@ const Main = () => {
                 <Posts data={posts}/>
             </div>
             <div className="sidebar">
-                {
-                    about.content &&
-                    <AboutMe content={about.content}/>
-                }
+                { about && <AboutMe data={about}/> }
             </div>
         </div>
     )

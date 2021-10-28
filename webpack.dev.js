@@ -12,6 +12,9 @@ module.exports = merge(common, {
             "/api": {
                 target: "http://localhost:3333",
                 pathRewrite: { '^/api': '' }
+            },
+            "/files": {
+                target: "http://localhost:3333/v1"
             }
         },
         historyApiFallback: true,

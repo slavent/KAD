@@ -13,7 +13,7 @@ const Posts = ( { data } ) =>
                     </div>
                     <div className="posts__photo">
                         <Link to={ "/posts/" + id }>
-                            <img src={ picture }/>
+                            <img src={ `/files/${picture}` }/>
                         </Link>
                     </div>
                     <div
