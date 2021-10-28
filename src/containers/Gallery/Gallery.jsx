@@ -14,9 +14,8 @@ const Gallery = () => {
         const getPhotos = async () => {
             const result = await fetch(API.GET_PHOTOS)
             const response = await result.json()
-            const formatted = response.map(item => item.acf.image)
 
-            setPhotos(formatted)
+            setPhotos(response)
         }
 
         getPhotos()
@@ -40,7 +39,7 @@ const Gallery = () => {
                         className="gallery__item"
                         onClick={() => onPreviewClick(key)}>
                         <figure>
-                            <img src={src}/>
+                            <img src={`/files/${src}`}/>
                         </figure>
                     </div>
                 )
@@ -48,9 +47,9 @@ const Gallery = () => {
             {
                 isShowPopup &&
                 <Lightbox
-                    mainSrc={photos[photoIndex]}
-                    nextSrc={photos[(photoIndex + 1) % photos.length]}
-                    prevSrc={photos[(photoIndex + photos.length - 1) % photos.length]}
+                    mainSrc={`/files/${photos[photoIndex]}`}
+                    nextSrc={`/files/${photos[(photoIndex + 1) % photos.length]}`}
+                    prevSrc={`/files/${photos[(photoIndex + photos.length - 1) % photos.length]}`}
                     onCloseRequest={() => togglePopup(false)}
                     onMovePrevRequest={() => setPhotoIndex((photoIndex + photos.length - 1) % photos.length)}
                     onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % photos.length)}/>
