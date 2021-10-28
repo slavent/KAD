@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react"
 import Box from "../../components/Box/Box";
-import "./style.scss"
 import API from "../../contants/api";
+import "./style.scss"
 
-const Projects = ({ data }) => {
+const Projects = () => {
     const [projects, setProjects] = useState([])
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const Projects = ({ data }) => {
                                 <a
                                     href={ item.link }
                                     target="_blank">
-                                    <img src={item.picture} alt=""/>
+                                    <img src={`/files/${item.picture}`} alt=""/>
                                 </a>
                             </div>
                         </div>
